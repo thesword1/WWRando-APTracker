@@ -6,6 +6,9 @@ An [Archipelago](https://archipelago.gg/) tracker for [The Wind Waker Randomizer
 
 Based on [wooferzfg's TWW Randomizer Tracker](https://github.com/wooferzfg/tww-rando-tracker).
 
+
+**Moved From Private Azure DevOps Repo to make use of Github Pages**
+
 ## Build Instructions
 
 Building and running the tracker locally requires [Node 20](https://nodejs.org/en/download/) and [Git](https://git-scm.com/downloads).
