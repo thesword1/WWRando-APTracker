@@ -535,7 +535,7 @@ export default class Launcher extends React.PureComponent {
               BigDunka •{" "}
             </span>
             <a
-              href={`https://github.com/thesword1/AP-WWTracker/commit/${COMMIT_HASH}`}
+              href={`https://github.com/thesword1/WWRando-APTracker/commit/${COMMIT_HASH}`}
               target="_blank"
               rel="noreferrer"
             >
