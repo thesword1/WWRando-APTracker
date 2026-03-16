@@ -1,0 +1,3152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogicHelper ALL_ITEMS returns a list of all the items, including entrances, charts, and keys 1`] = `
+[
+  "Entered Savage Labyrinth",
+  "Entered Dragon Roost Island Cave",
+  "Entered Fire Mountain Cave",
+  "Entered Ice Ring Isle Cave",
+  "Entered Cabana Labyrinth",
+  "Entered Needle Rock Isle Cave",
+  "Entered Angular Isles Cave",
+  "Entered Boating Course Cave",
+  "Entered Stone Watcher Island Cave",
+  "Entered Overlook Island Cave",
+  "Entered Bird's Peak Rock Cave",
+  "Entered Pawprint Isle Chuchu Cave",
+  "Entered Pawprint Isle Wizzrobe Cave",
+  "Entered Diamond Steppe Island Cave",
+  "Entered Bomb Island Cave",
+  "Entered Rock Spire Isle Cave",
+  "Entered Shark Island Cave",
+  "Entered Cliff Plateau Isles Cave",
+  "Entered Horseshoe Island Cave",
+  "Entered Star Island Cave",
+  "Entered Ice Ring Isle Inner Cave",
+  "Entered Cliff Plateau Highest Isle",
+  "Entered Outset Fairy Fountain",
+  "Entered Thorned Fairy Fountain",
+  "Entered Eastern Fairy Fountain",
+  "Entered Western Fairy Fountain",
+  "Entered Southern Fairy Fountain",
+  "Entered Northern Fairy Fountain",
+  "Treasure Chart 25",
+  "Treasure Chart 7",
+  "Treasure Chart 24",
+  "Triforce Chart 2",
+  "Treasure Chart 11",
+  "Triforce Chart 7",
+  "Treasure Chart 13",
+  "Treasure Chart 41",
+  "Treasure Chart 29",
+  "Treasure Chart 22",
+  "Treasure Chart 18",
+  "Treasure Chart 30",
+  "Treasure Chart 39",
+  "Treasure Chart 19",
+  "Treasure Chart 8",
+  "Treasure Chart 2",
+  "Treasure Chart 10",
+  "Treasure Chart 26",
+  "Treasure Chart 3",
+  "Treasure Chart 37",
+  "Treasure Chart 27",
+  "Treasure Chart 38",
+  "Triforce Chart 1",
+  "Treasure Chart 21",
+  "Treasure Chart 6",
+  "Treasure Chart 14",
+  "Treasure Chart 34",
+  "Treasure Chart 5",
+  "Treasure Chart 28",
+  "Treasure Chart 35",
+  "Triforce Chart 3",
+  "Triforce Chart 6",
+  "Treasure Chart 1",
+  "Treasure Chart 20",
+  "Treasure Chart 36",
+  "Treasure Chart 23",
+  "Treasure Chart 12",
+  "Treasure Chart 16",
+  "Treasure Chart 4",
+  "Treasure Chart 17",
+  "Treasure Chart 31",
+  "Triforce Chart 5",
+  "Treasure Chart 9",
+  "Triforce Chart 4",
+  "Treasure Chart 40",
+  "Triforce Chart 8",
+  "Treasure Chart 15",
+  "Treasure Chart 32",
+  "Treasure Chart 33",
+  "Chart for Forsaken Fortress Sector",
+  "Chart for Star Island",
+  "Chart for Northern Fairy Island",
+  "Chart for Gale Isle",
+  "Chart for Crescent Moon Island",
+  "Chart for Seven-Star Isles",
+  "Chart for Overlook Island",
+  "Chart for Four-Eye Reef",
+  "Chart for Mother and Child Isles",
+  "Chart for Spectacle Island",
+  "Chart for Windfall Island",
+  "Chart for Pawprint Isle",
+  "Chart for Dragon Roost Island",
+  "Chart for Flight Control Platform",
+  "Chart for Western Fairy Island",
+  "Chart for Rock Spire Isle",
+  "Chart for Tingle Island",
+  "Chart for Northern Triangle Island",
+  "Chart for Eastern Fairy Island",
+  "Chart for Fire Mountain",
+  "Chart for Star Belt Archipelago",
+  "Chart for Three-Eye Reef",
+  "Chart for Greatfish Isle",
+  "Chart for Cyclops Reef",
+  "Chart for Six-Eye Reef",
+  "Chart for Tower of the Gods Sector",
+  "Chart for Eastern Triangle Island",
+  "Chart for Thorned Fairy Island",
+  "Chart for Needle Rock Isle",
+  "Chart for Islet of Steel",
+  "Chart for Stone Watcher Island",
+  "Chart for Southern Triangle Island",
+  "Chart for Private Oasis",
+  "Chart for Bomb Island",
+  "Chart for Bird's Peak Rock",
+  "Chart for Diamond Steppe Island",
+  "Chart for Five-Eye Reef",
+  "Chart for Shark Island",
+  "Chart for Southern Fairy Island",
+  "Chart for Ice Ring Isle",
+  "Chart for Forest Haven",
+  "Chart for Cliff Plateau Isles",
+  "Chart for Horseshoe Island",
+  "Chart for Outset Island",
+  "Chart for Headstone Island",
+  "Chart for Two-Eye Reef",
+  "Chart for Angular Isles",
+  "Chart for Boating Course",
+  "Chart for Five-Star Isles",
+  "Entered DRC",
+  "Entered FW",
+  "Entered TotG",
+  "Entered ET",
+  "Entered WT",
+  "Entered FW Miniboss",
+  "Entered TotG Miniboss",
+  "Entered ET Miniboss",
+  "Entered WT Miniboss",
+  "Entered Gohma",
+  "Entered Kalle Demos",
+  "Entered Gohdan",
+  "Entered Helmaroc King",
+  "Entered Jalhalla",
+  "Entered Molgera",
+  "Entered Master Sword Chamber",
+  "Tingle Tuner",
+  "Wind Waker",
+  "Spoils Bag",
+  "Grappling Hook",
+  "Power Bracelets",
+  "Iron Boots",
+  "Bait Bag",
+  "Boomerang",
+  "Hookshot",
+  "Delivery Bag",
+  "Bombs",
+  "Skull Hammer",
+  "Deku Leaf",
+  "Triforce Shard",
+  "Nayru's Pearl",
+  "Din's Pearl",
+  "Farore's Pearl",
+  "Wind's Requiem",
+  "Ballad of Gales",
+  "Command Melody",
+  "Earth God's Lyric",
+  "Wind God's Aria",
+  "Song of Passing",
+  "Boat's Sail",
+  "Note to Mom",
+  "Maggie's Letter",
+  "Moblin's Letter",
+  "Cabana Deed",
+  "Tingle Statue",
+  "Ghost Ship Chart",
+  "Progressive Sword",
+  "Progressive Shield",
+  "Progressive Bow",
+  "Progressive Wallet",
+  "Progressive Picto Box",
+  "Progressive Magic Meter",
+  "Empty Bottle",
+  "Telescope",
+  "Magic Armor",
+  "Hero's Charm",
+  "Progressive Quiver",
+  "Progressive Bomb Bag",
+  "Hurricane Spin",
+  "DRC Dungeon Map",
+  "DRC Compass",
+  "FW Dungeon Map",
+  "FW Compass",
+  "TotG Dungeon Map",
+  "TotG Compass",
+  "FF Dungeon Map",
+  "FF Compass",
+  "ET Dungeon Map",
+  "ET Compass",
+  "WT Dungeon Map",
+  "WT Compass",
+  "Beedle's Chart",
+  "Fill-Up Coupon",
+  "Great Fairy Chart",
+  "Light Ring Chart",
+  "Octo Chart",
+  "Platform Chart",
+  "Secret Cave Chart",
+  "Submarine Chart",
+  "Tingle's Chart",
+  "DRC Big Key",
+  "DRC Small Key",
+  "FW Big Key",
+  "FW Small Key",
+  "TotG Big Key",
+  "TotG Small Key",
+  "ET Big Key",
+  "ET Small Key",
+  "WT Big Key",
+  "WT Small Key",
+]
+`;
+
+exports[`LogicHelper ALL_TREASURE_CHARTS returns expected treasure charts 1`] = `
+[
+  "Treasure Chart 1",
+  "Treasure Chart 2",
+  "Treasure Chart 3",
+  "Treasure Chart 4",
+  "Treasure Chart 5",
+  "Treasure Chart 6",
+  "Treasure Chart 7",
+  "Treasure Chart 8",
+  "Treasure Chart 9",
+  "Treasure Chart 10",
+  "Treasure Chart 11",
+  "Treasure Chart 12",
+  "Treasure Chart 13",
+  "Treasure Chart 14",
+  "Treasure Chart 15",
+  "Treasure Chart 16",
+  "Treasure Chart 17",
+  "Treasure Chart 18",
+  "Treasure Chart 19",
+  "Treasure Chart 20",
+  "Treasure Chart 21",
+  "Treasure Chart 22",
+  "Treasure Chart 23",
+  "Treasure Chart 24",
+  "Treasure Chart 25",
+  "Treasure Chart 26",
+  "Treasure Chart 27",
+  "Treasure Chart 28",
+  "Treasure Chart 29",
+  "Treasure Chart 30",
+  "Treasure Chart 31",
+  "Treasure Chart 32",
+  "Treasure Chart 33",
+  "Treasure Chart 34",
+  "Treasure Chart 35",
+  "Treasure Chart 36",
+  "Treasure Chart 37",
+  "Treasure Chart 38",
+  "Treasure Chart 39",
+  "Treasure Chart 40",
+  "Treasure Chart 41",
+]
+`;
+
+exports[`LogicHelper ALL_TRIFORCE_CHARTS returns expected triforce charts 1`] = `
+[
+  "Triforce Chart 1",
+  "Triforce Chart 2",
+  "Triforce Chart 3",
+  "Triforce Chart 4",
+  "Triforce Chart 5",
+  "Triforce Chart 6",
+  "Triforce Chart 7",
+  "Triforce Chart 8",
+]
+`;
+
+exports[`LogicHelper DUNGEONS returns the correct dungeons 1`] = `
+{
+  "DRAGON_ROOST_CAVERN": "Dragon Roost Cavern",
+  "EARTH_TEMPLE": "Earth Temple",
+  "FORBIDDEN_WOODS": "Forbidden Woods",
+  "FORSAKEN_FORTRESS": "Forsaken Fortress",
+  "GANONS_TOWER": "Ganon's Tower",
+  "TOWER_OF_THE_GODS": "Tower of the Gods",
+  "WIND_TEMPLE": "Wind Temple",
+}
+`;
+
+exports[`LogicHelper ISLANDS returns the correct islands 1`] = `
+{
+  "ANGULAR_ISLES": "Angular Isles",
+  "BIRDS_PEAK_ROCK": "Bird's Peak Rock",
+  "BOATING_COURSE": "Boating Course",
+  "BOMB_ISLAND": "Bomb Island",
+  "CLIFF_PLATEAU_ISLES": "Cliff Plateau Isles",
+  "CRESCENT_MOON_ISLAND": "Crescent Moon Island",
+  "CYCLOPS_REEF": "Cyclops Reef",
+  "DIAMOND_STEPPE_ISLAND": "Diamond Steppe Island",
+  "DRAGON_ROOST_ISLAND": "Dragon Roost Island",
+  "EASTERN_FAIRY_ISLAND": "Eastern Fairy Island",
+  "EASTERN_TRIANGLE_ISLAND": "Eastern Triangle Island",
+  "FIRE_MOUNTAIN": "Fire Mountain",
+  "FIVE_EYE_REEF": "Five-Eye Reef",
+  "FIVE_STAR_ISLES": "Five-Star Isles",
+  "FLIGHT_CONTROL_PLATFORM": "Flight Control Platform",
+  "FOREST_HAVEN": "Forest Haven",
+  "FORSAKEN_FORTRESS_SECTOR": "Forsaken Fortress Sector",
+  "FOUR_EYE_REEF": "Four-Eye Reef",
+  "GALE_ISLE": "Gale Isle",
+  "GREATFISH_ISLE": "Greatfish Isle",
+  "HEADSTONE_ISLAND": "Headstone Island",
+  "HORSESHOE_ISLAND": "Horseshoe Island",
+  "ICE_RING_ISLE": "Ice Ring Isle",
+  "ISLET_OF_STEEL": "Islet of Steel",
+  "MOTHER_AND_CHILD_ISLES": "Mother and Child Isles",
+  "NEEDLE_ROCK_ISLE": "Needle Rock Isle",
+  "NORTHERN_FAIRY_ISLAND": "Northern Fairy Island",
+  "NORTHERN_TRIANGLE_ISLAND": "Northern Triangle Island",
+  "OUTSET_ISLAND": "Outset Island",
+  "OVERLOOK_ISLAND": "Overlook Island",
+  "PAWPRINT_ISLE": "Pawprint Isle",
+  "PRIVATE_OASIS": "Private Oasis",
+  "ROCK_SPIRE_ISLE": "Rock Spire Isle",
+  "SEVEN_STAR_ISLES": "Seven-Star Isles",
+  "SHARK_ISLAND": "Shark Island",
+  "SIX_EYE_REEF": "Six-Eye Reef",
+  "SOUTHERN_FAIRY_ISLAND": "Southern Fairy Island",
+  "SOUTHERN_TRIANGLE_ISLAND": "Southern Triangle Island",
+  "SPECTACLE_ISLAND": "Spectacle Island",
+  "STAR_BELT_ARCHIPELAGO": "Star Belt Archipelago",
+  "STAR_ISLAND": "Star Island",
+  "STONE_WATCHER_ISLAND": "Stone Watcher Island",
+  "THORNED_FAIRY_ISLAND": "Thorned Fairy Island",
+  "THREE_EYE_REEF": "Three-Eye Reef",
+  "TINGLE_ISLAND": "Tingle Island",
+  "TOWER_OF_THE_GODS_SECTOR": "Tower of the Gods Sector",
+  "TWO_EYE_REEF": "Two-Eye Reef",
+  "WESTERN_FAIRY_ISLAND": "Western Fairy Island",
+  "WINDFALL_ISLAND": "Windfall Island",
+}
+`;
+
+exports[`LogicHelper ITEMS returns the correct items 1`] = `
+{
+  "BAIT_BAG": "Bait Bag",
+  "BALLAD_OF_GALES": "Ballad of Gales",
+  "BEEDLES_CHART": "Beedle's Chart",
+  "BOATS_SAIL": "Boat's Sail",
+  "BOMBS": "Bombs",
+  "BOOMERANG": "Boomerang",
+  "CABANA_DEED": "Cabana Deed",
+  "COMMAND_MELODY": "Command Melody",
+  "DEKU_LEAF": "Deku Leaf",
+  "DELIVERY_BAG": "Delivery Bag",
+  "DINS_PEARL": "Din's Pearl",
+  "DRC_COMPASS": "DRC Compass",
+  "DRC_DUNGEON_MAP": "DRC Dungeon Map",
+  "EARTH_GODS_LYRIC": "Earth God's Lyric",
+  "EMPTY_BOTTLE": "Empty Bottle",
+  "ET_COMPASS": "ET Compass",
+  "ET_DUNGEON_MAP": "ET Dungeon Map",
+  "FARORES_PEARL": "Farore's Pearl",
+  "FF_COMPASS": "FF Compass",
+  "FF_DUNGEON_MAP": "FF Dungeon Map",
+  "FILL_UP_COUPON": "Fill-Up Coupon",
+  "FW_COMPASS": "FW Compass",
+  "FW_DUNGEON_MAP": "FW Dungeon Map",
+  "GHOST_SHIP_CHART": "Ghost Ship Chart",
+  "GRAPPLING_HOOK": "Grappling Hook",
+  "GREAT_FAIRY_CHART": "Great Fairy Chart",
+  "HEROS_CHARM": "Hero's Charm",
+  "HOOKSHOT": "Hookshot",
+  "HURRICANE_SPIN": "Hurricane Spin",
+  "IRON_BOOTS": "Iron Boots",
+  "LIGHT_RING_CHART": "Light Ring Chart",
+  "MAGGIES_LETTER": "Maggie's Letter",
+  "MAGIC_ARMOR": "Magic Armor",
+  "MOBLINS_LETTER": "Moblin's Letter",
+  "NAYRUS_PEARL": "Nayru's Pearl",
+  "NOTE_TO_MOM": "Note to Mom",
+  "OCTO_CHART": "Octo Chart",
+  "PLATFORM_CHART": "Platform Chart",
+  "POWER_BRACELETS": "Power Bracelets",
+  "PROGRESSIVE_BOMB_BAG": "Progressive Bomb Bag",
+  "PROGRESSIVE_BOW": "Progressive Bow",
+  "PROGRESSIVE_MAGIC_METER": "Progressive Magic Meter",
+  "PROGRESSIVE_PICTO_BOX": "Progressive Picto Box",
+  "PROGRESSIVE_QUIVER": "Progressive Quiver",
+  "PROGRESSIVE_SHIELD": "Progressive Shield",
+  "PROGRESSIVE_SWORD": "Progressive Sword",
+  "PROGRESSIVE_WALLET": "Progressive Wallet",
+  "SECRET_CAVE_CHART": "Secret Cave Chart",
+  "SKULL_HAMMER": "Skull Hammer",
+  "SONG_OF_PASSING": "Song of Passing",
+  "SPOILS_BAG": "Spoils Bag",
+  "SUBMARINE_CHART": "Submarine Chart",
+  "TELESCOPE": "Telescope",
+  "TINGLES_CHART": "Tingle's Chart",
+  "TINGLE_STATUE": "Tingle Statue",
+  "TINGLE_TUNER": "Tingle Tuner",
+  "TOT_G_COMPASS": "TotG Compass",
+  "TOT_G_DUNGEON_MAP": "TotG Dungeon Map",
+  "TRIFORCE_SHARD": "Triforce Shard",
+  "WINDS_REQUIEM": "Wind's Requiem",
+  "WIND_GODS_ARIA": "Wind God's Aria",
+  "WIND_WAKER": "Wind Waker",
+  "WT_COMPASS": "WT Compass",
+  "WT_DUNGEON_MAP": "WT Dungeon Map",
+}
+`;
+
+exports[`LogicHelper MAIN_DUNGEONS returns all dungeons with keys 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+]
+`;
+
+exports[`LogicHelper MISC_LOCATIONS returns the correct miscellanous locations 1`] = `
+{
+  "HYRULE": "Hyrule",
+  "MAILBOX": "Mailbox",
+  "THE_GREAT_SEA": "The Great Sea",
+}
+`;
+
+exports[`LogicHelper REQUIRED_BOSSES_MODE_DUNGEONS returns all dungeons in required bosses mode 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Forsaken Fortress",
+  "Earth Temple",
+  "Wind Temple",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when dungeon and cave entrances are randomized separately returns all the dungeons and caves 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when dungeon and cave entrances are randomized together returns all the dungeons and caves 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when only cave entrances are randomized returns all the caves without inner caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when only dungeon entrances are randomized returns all the dungeons 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when only inner entrances are randomized returns all the bosses, minibosses, and inner caves 1`] = `
+[
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when there are nested cave entrances returns all the caves and inner caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when there are nested dungeon entrances and caves separately returns all the dungeons, bosses, minibosses, caves, and fairies 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when there are nested dungeon entrances and caves together returns all the dungeons, bosses, minibosses, caves, and fairies 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper allRandomEntrances when there are nested dungeon entrances returns all the dungeons, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Dragon Roost Cavern 1`] = `
+[
+  {
+    "detailedLocation": "First Room",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Alcove With Water Jugs",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Water Jug on Upper Shelf",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Boarded Up Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Chest Across Lava Pit",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Rat Room",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Rat Room Boarded Up Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Bird's Nest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Dark Room",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Tingle Chest in Hub Room",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Pot on Upper Shelf in Pot Room",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Pot Room Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Miniboss",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Under Rope Bridge",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Boss Stairs Right Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Boss Stairs Left Chest",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Boss Stairs Right Pot",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+  {
+    "detailedLocation": "Gohma Heart Container",
+    "generalLocation": "Dragon Roost Cavern",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Earth Temple when includeAdditionalLocations is false 1`] = `
+[
+  {
+    "detailedLocation": "Transparent Chest In Warp Pot Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Behind Curtain In Warp Pot Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Transparent Chest in First Crypt",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest Behind Destructible Walls",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest In Three Blocks Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest Behind Statues",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Casket in Second Crypt",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Stalfos Miniboss Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "End of Foggy Room With Floormasters",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Kill All Floormasters in Foggy Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Behind Curtain Next to Hammer Button",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest in Third Crypt",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Many Mirrors Room Right Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Many Mirrors Room Left Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Stalfos Crypt Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Jalhalla Heart Container",
+    "generalLocation": "Earth Temple",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Earth Temple when includeAdditionalLocations is true 1`] = `
+[
+  {
+    "detailedLocation": "Transparent Chest In Warp Pot Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Behind Curtain In Warp Pot Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Transparent Chest in First Crypt",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest Behind Destructible Walls",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest In Three Blocks Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest Behind Statues",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Casket in Second Crypt",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Stalfos Miniboss Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "End of Foggy Room With Floormasters",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Kill All Floormasters in Foggy Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Behind Curtain Next to Hammer Button",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Chest in Third Crypt",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Many Mirrors Room Right Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Many Mirrors Room Left Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Stalfos Crypt Room",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Jalhalla Heart Container",
+    "generalLocation": "Earth Temple",
+  },
+  {
+    "detailedLocation": "Letter from Baito",
+    "generalLocation": "Mailbox",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Forbidden Woods when includeAdditionalLocations is false 1`] = `
+[
+  {
+    "detailedLocation": "First Room",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Inside Hollow Tree's Mouth",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Climb to Top Using Boko Baba Bulbs",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Pot High Above Hollow Tree",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Hole in Tree",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Morth Pit",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Vine Maze Left Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Vine Maze Right Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Highest Pot in Vine Maze",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Tall Room Before Miniboss",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Mothula Miniboss Room",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Past Seeds Hanging by Vines",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Chest Across Red Hanging Flower",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Chest in Locked Tree Trunk",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Double Mothula Room",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Kalle Demos Heart Container",
+    "generalLocation": "Forbidden Woods",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Forbidden Woods when includeAdditionalLocations is true 1`] = `
+[
+  {
+    "detailedLocation": "First Room",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Inside Hollow Tree's Mouth",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Climb to Top Using Boko Baba Bulbs",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Pot High Above Hollow Tree",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Hole in Tree",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Morth Pit",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Vine Maze Left Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Vine Maze Right Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Highest Pot in Vine Maze",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Tall Room Before Miniboss",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Mothula Miniboss Room",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Past Seeds Hanging by Vines",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Chest Across Red Hanging Flower",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Chest in Locked Tree Trunk",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Double Mothula Room",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Kalle Demos Heart Container",
+    "generalLocation": "Forbidden Woods",
+  },
+  {
+    "detailedLocation": "Letter from Orca",
+    "generalLocation": "Mailbox",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Forsaken Fortress when includeAdditionalLocations is false 1`] = `
+[
+  {
+    "detailedLocation": "Phantom Ganon",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest Outside Upper Jail Cell",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest Inside Lower Jail Cell",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest Guarded By Bokoblin",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest on Bed",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Helmaroc King Heart Container",
+    "generalLocation": "Forsaken Fortress",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Forsaken Fortress when includeAdditionalLocations is true 1`] = `
+[
+  {
+    "detailedLocation": "Phantom Ganon",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest Outside Upper Jail Cell",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest Inside Lower Jail Cell",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest Guarded By Bokoblin",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Chest on Bed",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Helmaroc King Heart Container",
+    "generalLocation": "Forsaken Fortress",
+  },
+  {
+    "detailedLocation": "Letter from Aryll",
+    "generalLocation": "Mailbox",
+  },
+  {
+    "detailedLocation": "Letter from Tingle",
+    "generalLocation": "Mailbox",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Outset Island 1`] = `
+[
+  {
+    "detailedLocation": "Underneath Link's House",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Mesa the Grasscutter's House",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Orca - Give 10 Knight's Crests",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Orca - Hit 500 Times",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Great Fairy",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Jabun's Cave",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Dig up Black Soil",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Savage Labyrinth - Floor 30",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Savage Labyrinth - Floor 50",
+    "generalLocation": "Outset Island",
+  },
+  {
+    "detailedLocation": "Sunken Treasure",
+    "generalLocation": "Outset Island",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Tower of the Gods 1`] = `
+[
+  {
+    "detailedLocation": "Chest Behind Bombable Walls",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Pot Behind Bombable Walls",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Hop Across Floating Boxes",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Light Two Torches",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Skulls Room Chest",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Shoot Eye Above Skulls Room Chest",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "First Chest Guarded by Armos Knights",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Stone Tablet",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Darknut Miniboss Room",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Second Chest Guarded by Armos Knights",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Floating Platforms Room",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Top of Floating Platforms Room",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Eastern Pot in Big Key Chest Room",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Tower of the Gods",
+  },
+  {
+    "detailedLocation": "Gohdan Heart Container",
+    "generalLocation": "Tower of the Gods",
+  },
+]
+`;
+
+exports[`LogicHelper bannedLocationsForZone returns the correct locations for Wind Temple 1`] = `
+[
+  {
+    "detailedLocation": "Chest Between Two Dirt Patches",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Behind Stone Head in Hidden Upper Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Tingle Statue Chest",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Chest Behind Stone Head",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Chest in Left Alcove",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Big Key Chest",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Chest In Many Cyclones Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Behind Stone Head in Many Cyclones Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Chest In Middle Of Hub Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Spike Wall Room - First Chest",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Spike Wall Room - Destroy All Cracked Floors",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Wizzrobe Miniboss Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Chest at Top of Hub Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Chest Behind Seven Armos",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Kill All Enemies in Tall Basement Room",
+    "generalLocation": "Wind Temple",
+  },
+  {
+    "detailedLocation": "Molgera Heart Container",
+    "generalLocation": "Wind Temple",
+  },
+]
+`;
+
+exports[`LogicHelper boss requirements when bosses are marked as non-required and then unmarked includes only required bosses in the requirements for Defeat Ganondorf 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+    "Progressive Sword x4",
+    "Progressive Bow x3",
+    "Progressive Magic Meter x1",
+    "Defeated Gohma",
+    "Defeated Kalle Demos",
+    "Defeated Helmaroc King",
+    "Defeated Jalhalla",
+    "Defeated Molgera",
+    "Boomerang",
+    "Grappling Hook",
+    "Hookshot",
+    "Progressive Shield x1",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper boss requirements when bosses are marked as non-required flattens the boss requirements of only the required bosses when flattened is true 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+    "Progressive Sword x4",
+    "Progressive Bow x3",
+    "Progressive Magic Meter x1",
+    "Deku Leaf",
+    "Wind Waker",
+    "Wind's Requiem",
+    "FW Big Key",
+    "Boomerang",
+    "Bombs",
+    "Skull Hammer",
+    "Iron Boots",
+    "Command Melody",
+    "WT Small Key x2",
+    "Wind God's Aria",
+    "WT Big Key",
+    "Grappling Hook",
+    "Hookshot",
+    "Progressive Shield x1",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper boss requirements when bosses are marked as non-required includes only required bosses in the requirements for Defeat Ganondorf 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+    "Progressive Sword x4",
+    "Progressive Bow x3",
+    "Progressive Magic Meter x1",
+    "Defeated Kalle Demos",
+    "Defeated Helmaroc King",
+    "Defeated Molgera",
+    "Boomerang",
+    "Grappling Hook",
+    "Hookshot",
+    "Progressive Shield x1",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper boss requirements when none of the non-required bosses are marked flattens the boss requirements when flattened is true 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+    "Progressive Sword x4",
+    "Progressive Bow x3",
+    "Progressive Magic Meter x1",
+    "DRC Small Key x4",
+    "DRC Big Key",
+    "Deku Leaf",
+    "Wind Waker",
+    "Wind's Requiem",
+    "FW Big Key",
+    "Boomerang",
+    "Din's Pearl",
+    "Farore's Pearl",
+    "Nayru's Pearl",
+    "Bombs",
+    "Command Melody",
+    "TotG Small Key x2",
+    "TotG Big Key",
+    "Skull Hammer",
+    "Power Bracelets",
+    "Progressive Shield x2",
+    "Earth God's Lyric",
+    "ET Small Key x3",
+    "ET Big Key",
+    "Iron Boots",
+    "WT Small Key x2",
+    "Wind God's Aria",
+    "WT Big Key",
+    "Grappling Hook",
+    "Hookshot",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper boss requirements when none of the non-required bosses are marked includes all bosses in the requirements for Defeat Ganondorf 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+    "Progressive Sword x4",
+    "Progressive Bow x3",
+    "Progressive Magic Meter x1",
+    "Defeated Gohma",
+    "Defeated Kalle Demos",
+    "Defeated Gohdan",
+    "Defeated Helmaroc King",
+    "Defeated Jalhalla",
+    "Defeated Molgera",
+    "Boomerang",
+    "Grappling Hook",
+    "Hookshot",
+    "Progressive Shield x1",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper initialize when in swordless mode sets sword to 0 in the starting items and adds impossible items 1`] = `
+{
+  "Boat's Sail": 1,
+  "Progressive Sword": 0,
+  "Tingle Statue": 0,
+  "Triforce Shard": 0,
+}
+`;
+
+exports[`LogicHelper initialize when in swordless mode sets sword to 0 in the starting items and adds impossible items 2`] = `
+{
+  "Hurricane Spin": 1,
+  "Progressive Sword": 1,
+}
+`;
+
+exports[`LogicHelper initialize when starting without a sword sets sword to 0 in the starting items 1`] = `
+{
+  "Boat's Sail": 1,
+  "Progressive Sword": 0,
+  "Tingle Statue": 0,
+  "Triforce Shard": 0,
+}
+`;
+
+exports[`LogicHelper initialize with no starting shards, no starting gear, and starting with a sword sets the starting and impossible items 1`] = `
+{
+  "Boat's Sail": 1,
+  "Progressive Sword": 1,
+  "Tingle Statue": 0,
+  "Triforce Shard": 0,
+}
+`;
+
+exports[`LogicHelper initialize with starting gear sets the starting items based on the starting gear 1`] = `
+{
+  "Boat's Sail": 1,
+  "Bombs": 1,
+  "Deku Leaf": 1,
+  "Progressive Sword": 3,
+  "Tingle Statue": 5,
+  "Triforce Shard": 0,
+}
+`;
+
+exports[`LogicHelper initialize with starting shards sets the number of starting shards 1`] = `
+{
+  "Boat's Sail": 1,
+  "Progressive Sword": 1,
+  "Tingle Statue": 0,
+  "Triforce Shard": 7,
+}
+`;
+
+exports[`LogicHelper randomEntrancesForExit when dungeon and cave entrances are randomized separately when the exit is a cave returns all the caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when dungeon and cave entrances are randomized separately when the exit is a dungeon returns all the dungeons 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when dungeon and cave entrances are randomized together when the exit is a cave returns all the dungeons and caves 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when dungeon and cave entrances are randomized together when the exit is a dungeon returns all the dungeons and caves 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when only cave entrances are randomized returns all the caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when only dungeon entrances are randomized returns all the dungeons 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when only inner entrances are randomized separately when the exit is a boss returns all the bosses and minibosses 1`] = `
+[
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when only inner entrances are randomized separately when the exit is a miniboss returns all the bosses and minibosses 1`] = `
+[
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when only inner entrances are randomized separately when the exit is an inner cave returns all the inner caves 1`] = `
+[
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested cave entrances when the exit is a cave with an inner cave returns all the caves except its own inner cave 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested cave entrances when the exit is a cave without an inner cave returns all the caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested cave entrances when the exit is an inner cave returns all the caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances when the exit is a boss returns all the dungeons, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances when the exit is a dungeon returns all the dungeons, bosses, and minibosses except its own boss door and miniboss 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances when the exit is a miniboss returns all the dungeons, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is a boss returns all the dungeons, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is a cave returns all the caves and fairies 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is a cave with an inner cave returns all the caves and fairies except its own inner cave 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is a dungeon returns all the dungeons, bosses, and minibosses except its own boss door and miniboss 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is a fairy fountain returns all the caves and fairies 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is a miniboss returns all the dungeons, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves separately when the exit is an inner cave returns all the caves and fairies 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is a boss returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is a cave returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is a cave with an inner cave returns all the dungeons, bosses, minibosses, fairies, and caves except its own inner cave 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is a dungeon returns all the dungeons, caves, fairies, bosses, and minibosses except its own boss door and miniboss 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is a fairy fountain returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is a miniboss returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomEntrancesForExit when there are nested dungeon entrances with caves together when the exit is an inner cave returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when dungeon and cave entrances are randomized separately when the entrance is a cave returns all the caves 1`] = `
+[
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when dungeon and cave entrances are randomized separately when the entrance is a dungeon returns all the dungeons 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when there are nested dungeon entrances with caves together when the entrance is a boss returns all the dungeons, caves, fairies, bosses, and minibosses except its own dungeon (FW) 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when there are nested dungeon entrances with caves together when the entrance is a cave returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when there are nested dungeon entrances with caves together when the entrance is a dungeon returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when there are nested dungeon entrances with caves together when the entrance is a fairy fountain returns all the dungeons, caves, fairies, bosses, and minibosses 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when there are nested dungeon entrances with caves together when the entrance is a miniboss returns all the dungeons, caves, fairies, bosses, and minibosses except its own dungeon (ET) 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Ice Ring Isle Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper randomExitsForEntrance when there are nested dungeon entrances with caves together when the entrance is an inner cave returns all the dungeons, bosses, minibosses, fairies, and caves except the cave that contains the entrance 1`] = `
+[
+  "Dragon Roost Cavern",
+  "Forbidden Woods",
+  "Tower of the Gods",
+  "Earth Temple",
+  "Wind Temple",
+  "Forbidden Woods Miniboss Arena",
+  "Tower of the Gods Miniboss Arena",
+  "Earth Temple Miniboss Arena",
+  "Wind Temple Miniboss Arena",
+  "Gohma Boss Arena",
+  "Kalle Demos Boss Arena",
+  "Gohdan Boss Arena",
+  "Helmaroc King Boss Arena",
+  "Jalhalla Boss Arena",
+  "Molgera Boss Arena",
+  "Master Sword Chamber",
+  "Savage Labyrinth",
+  "Dragon Roost Island Secret Cave",
+  "Fire Mountain Secret Cave",
+  "Cabana Labyrinth",
+  "Needle Rock Isle Secret Cave",
+  "Angular Isles Secret Cave",
+  "Boating Course Secret Cave",
+  "Stone Watcher Island Secret Cave",
+  "Overlook Island Secret Cave",
+  "Bird's Peak Rock Secret Cave",
+  "Pawprint Isle Chuchu Cave",
+  "Pawprint Isle Wizzrobe Cave",
+  "Diamond Steppe Island Warp Maze Cave",
+  "Bomb Island Secret Cave",
+  "Rock Spire Isle Secret Cave",
+  "Shark Island Secret Cave",
+  "Cliff Plateau Isles Secret Cave",
+  "Horseshoe Island Secret Cave",
+  "Star Island Secret Cave",
+  "Ice Ring Isle Inner Cave",
+  "Cliff Plateau Isles Inner Cave",
+  "Outset Fairy Fountain",
+  "Thorned Fairy Fountain",
+  "Eastern Fairy Fountain",
+  "Western Fairy Fountain",
+  "Southern Fairy Fountain",
+  "Northern Fairy Fountain",
+]
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for Bomb Island Secret Cave 1`] = `
+BooleanExpression {
+  "items": [
+    "Bombs",
+    "Power Bracelets",
+  ],
+  "type": "or",
+}
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for FW Miniboss 1`] = `
+BooleanExpression {
+  "items": [
+    "Entered FW",
+    "Deku Leaf",
+    "Progressive Magic Meter x1",
+    "Grappling Hook",
+    "FW Small Key x1",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for Forbidden Woods 1`] = `
+BooleanExpression {
+  "items": [
+    "Grappling Hook",
+    "Deku Leaf",
+    "Progressive Magic Meter x1",
+    "Wind Waker",
+    "Wind's Requiem",
+    BooleanExpression {
+      "items": [
+        "Progressive Sword x1",
+        "Skull Hammer",
+        "Boomerang",
+        "Bombs",
+        "Progressive Magic Meter x2",
+      ],
+      "type": "or",
+    },
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for Ice Ring Isle Inner Cave 1`] = `
+BooleanExpression {
+  "items": [
+    "Entered Ice Ring Isle Cave",
+    "Iron Boots",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for Jalhalla 1`] = `
+BooleanExpression {
+  "items": [
+    "Entered ET",
+    "Wind Waker",
+    "Command Melody",
+    "Progressive Shield x2",
+    "Earth God's Lyric",
+    "Power Bracelets",
+    "Skull Hammer",
+    "ET Small Key x3",
+    "ET Big Key",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for Master Sword Chamber 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForEntrance returns simplified requirements for Outset Fairy Fountain 1`] = `
+BooleanExpression {
+  "items": [
+    BooleanExpression {
+      "items": [
+        "Progressive Sword x1",
+        "Boomerang",
+        "Skull Hammer",
+      ],
+      "type": "or",
+    },
+    "Deku Leaf",
+    "Progressive Magic Meter x1",
+    "Wind Waker",
+    "Wind's Requiem",
+    BooleanExpression {
+      "items": [
+        "Bombs",
+        "Power Bracelets",
+      ],
+      "type": "or",
+    },
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting with a sword returns simplified requirements for Cliff Plateau Isles - Cave 1`] = `
+BooleanExpression {
+  "items": [
+    "Nothing",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Cliff Plateau Isles - Cave 1`] = `
+BooleanExpression {
+  "items": [
+    "Progressive Sword x1",
+    "Boomerang",
+    "Skull Hammer",
+    "Progressive Bow x1",
+    "Hookshot",
+    "Bombs",
+    BooleanExpression {
+      "items": [
+        "Deku Leaf",
+        "Progressive Magic Meter x1",
+        "Grappling Hook",
+      ],
+      "type": "and",
+    },
+  ],
+  "type": "or",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Dragon Roost Cavern - Gohma Heart Container 1`] = `
+BooleanExpression {
+  "items": [
+    "DRC Small Key x4",
+    "DRC Big Key",
+    "Grappling Hook",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Earth Temple - Jalhalla Heart Container 1`] = `
+BooleanExpression {
+  "items": [
+    "Power Bracelets",
+    "Wind Waker",
+    "Command Melody",
+    "Progressive Shield x2",
+    "Earth God's Lyric",
+    "Skull Hammer",
+    "ET Small Key x3",
+    "ET Big Key",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Ganondorf 1`] = `
+BooleanExpression {
+  "items": [
+    "Triforce Shard x8",
+    "Progressive Sword x4",
+    "Progressive Bow x3",
+    "Progressive Magic Meter x1",
+    "Boomerang",
+    "Grappling Hook",
+    "Hookshot",
+    "Progressive Shield x1",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Letter from Baito 1`] = `
+BooleanExpression {
+  "items": [
+    "Delivery Bag",
+    "Note to Mom",
+    "Has Accessed Other Location "Earth Temple - Jalhalla Heart Container"",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Mailbox - Beedle's Silver Membership Reward 1`] = `
+BooleanExpression {
+  "items": [
+    BooleanExpression {
+      "items": [
+        "Bait Bag",
+        "Bombs",
+        "Progressive Bow x1",
+        "Empty Bottle",
+      ],
+      "type": "or",
+    },
+    "Song of Passing",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Outset Island - Great Fairy 1`] = `
+BooleanExpression {
+  "items": [
+    BooleanExpression {
+      "items": [
+        "Progressive Sword x1",
+        "Boomerang",
+        "Skull Hammer",
+      ],
+      "type": "or",
+    },
+    "Deku Leaf",
+    "Progressive Magic Meter x1",
+    "Wind Waker",
+    "Wind's Requiem",
+    BooleanExpression {
+      "items": [
+        "Bombs",
+        "Power Bracelets",
+      ],
+      "type": "or",
+    },
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Outset Island - Savage Labyrinth - Floor 30 1`] = `
+BooleanExpression {
+  "items": [
+    BooleanExpression {
+      "items": [
+        BooleanExpression {
+          "items": [
+            BooleanExpression {
+              "items": [
+                "Progressive Sword x1",
+                "Boomerang",
+                "Skull Hammer",
+              ],
+              "type": "or",
+            },
+            "Deku Leaf",
+            "Progressive Magic Meter x1",
+          ],
+          "type": "and",
+        },
+        "Hookshot",
+      ],
+      "type": "or",
+    },
+    "Power Bracelets",
+    BooleanExpression {
+      "items": [
+        "Boomerang",
+        BooleanExpression {
+          "items": [
+            "Hookshot",
+            "Progressive Sword x1",
+          ],
+          "type": "and",
+        },
+        BooleanExpression {
+          "items": [
+            "Deku Leaf",
+            "Progressive Magic Meter x1",
+            "Progressive Sword x1",
+          ],
+          "type": "and",
+        },
+        "Skull Hammer",
+        "Progressive Bow x1",
+        "Bombs",
+      ],
+      "type": "or",
+    },
+    BooleanExpression {
+      "items": [
+        BooleanExpression {
+          "items": [
+            "Boomerang",
+            "Progressive Sword x1",
+          ],
+          "type": "and",
+        },
+        "Progressive Bow x1",
+        "Bombs",
+        BooleanExpression {
+          "items": [
+            "Deku Leaf",
+            "Progressive Magic Meter x1",
+            "Progressive Sword x1",
+          ],
+          "type": "and",
+        },
+        "Skull Hammer",
+      ],
+      "type": "or",
+    },
+    BooleanExpression {
+      "items": [
+        "Progressive Sword x1",
+        BooleanExpression {
+          "items": [
+            "Progressive Bow x3",
+            "Progressive Magic Meter x1",
+          ],
+          "type": "and",
+        },
+        "Skull Hammer",
+      ],
+      "type": "or",
+    },
+    "Wind Waker",
+    "Wind's Requiem",
+    BooleanExpression {
+      "items": [
+        "Grappling Hook",
+        "Progressive Sword x1",
+        "Skull Hammer",
+      ],
+      "type": "or",
+    },
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword returns simplified requirements for Outset Island - Savage Labyrinth - Floor 50 1`] = `
+BooleanExpression {
+  "items": [
+    BooleanExpression {
+      "items": [
+        BooleanExpression {
+          "items": [
+            "Deku Leaf",
+            "Progressive Magic Meter x1",
+          ],
+          "type": "and",
+        },
+        "Hookshot",
+      ],
+      "type": "or",
+    },
+    "Power Bracelets",
+    "Wind Waker",
+    "Wind's Requiem",
+    "Progressive Shield x2",
+    BooleanExpression {
+      "items": [
+        BooleanExpression {
+          "items": [
+            "Progressive Bow x2",
+            "Progressive Magic Meter x1",
+          ],
+          "type": "and",
+        },
+        "Bombs",
+        BooleanExpression {
+          "items": [
+            "Deku Leaf",
+            "Progressive Magic Meter x1",
+          ],
+          "type": "and",
+        },
+        "Hookshot",
+      ],
+      "type": "or",
+    },
+    "Skull Hammer",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when starting without a sword when flattened is true returns flattened requirements for Letter from Baito 1`] = `
+BooleanExpression {
+  "items": [
+    "Delivery Bag",
+    "Note to Mom",
+    "Power Bracelets",
+    "Wind Waker",
+    "Command Melody",
+    "Progressive Shield x2",
+    "Earth God's Lyric",
+    "Skull Hammer",
+    "ET Small Key x3",
+    "ET Big Key",
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when swordless returns simplified requirements for The Great Sea - Ghost Ship 1`] = `
+BooleanExpression {
+  "items": [
+    "Ghost Ship Chart",
+    "Wind Waker",
+    "Ballad of Gales",
+    BooleanExpression {
+      "items": [
+        BooleanExpression {
+          "items": [
+            "Progressive Bow x3",
+            "Progressive Magic Meter x1",
+          ],
+          "type": "and",
+        },
+        "Skull Hammer",
+        "Bombs",
+      ],
+      "type": "or",
+    },
+  ],
+  "type": "and",
+}
+`;
+
+exports[`LogicHelper requirementsForLocation when using very hard logic returns simplified requirements for Outset Island - Great Fairy 1`] = `
+BooleanExpression {
+  "items": [
+    "Deku Leaf",
+    "Progressive Magic Meter x1",
+    "Wind Waker",
+    "Wind's Requiem",
+    BooleanExpression {
+      "items": [
+        "Bombs",
+        "Power Bracelets",
+      ],
+      "type": "or",
+    },
+  ],
+  "type": "and",
+}
+`;
