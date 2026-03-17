@@ -77,5 +77,6 @@
   "trap_chests",
 
   "archipelago_link",
-  "archipelago_name"
+  "archipelago_name",
+  "archipelago_password"
 ]

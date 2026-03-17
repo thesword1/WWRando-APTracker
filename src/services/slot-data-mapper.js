@@ -156,6 +156,7 @@ class SlotDataMapper {
     // AP connection info defaults (caller should override these)
     _.set(options, Permalink.OPTIONS.ARCHIPELAGO_LINK, "");
     _.set(options, Permalink.OPTIONS.ARCHIPELAGO_NAME, "");
+    _.set(options, Permalink.OPTIONS.ARCHIPELAGO_PASSWORD, "");
 
     return options;
   }

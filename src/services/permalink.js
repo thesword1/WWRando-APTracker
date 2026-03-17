@@ -32,7 +32,7 @@ class Permalink {
     [this.OPTIONS.SWORD_MODE]: SWORD_MODE_OPTIONS,
   };
 
-  static DEFAULT_PERMALINK = "bWFzdGVyAEEA//x3MkAA9gWQCwAAAAAAAAAAAAAgAAA=";
+  static DEFAULT_PERMALINK = "bWFzdGVyAEEA//x3MkAA9gWQCwAAAAAAAAAAAAAgAAAA";
 
   static decode(permalinkString) {
     const binaryString = BinaryString.fromBase64(permalinkString);
@@ -126,6 +126,7 @@ class Permalink {
     this.#booleanConfig(this.OPTIONS.DO_NOT_GENERATE_SPOILER_LOG),
     this.#stringConfig(this.OPTIONS.ARCHIPELAGO_LINK),
     this.#stringConfig(this.OPTIONS.ARCHIPELAGO_NAME),
+    this.#stringConfig(this.OPTIONS.ARCHIPELAGO_PASSWORD),
   ];
 
   static #stringConfig(optionName) {

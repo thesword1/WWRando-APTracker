@@ -149,7 +149,13 @@ export default class Launcher extends React.PureComponent {
     );
   }
 
-  textInput({ labelText, optionName, isDisabled = false }) {
+  textInput({
+    labelText,
+    optionName,
+    isDisabled = false,
+    inputType,
+    placeholder,
+  }) {
     const optionValue = this.getOptionValue(optionName);
 
     return (
@@ -160,6 +166,8 @@ export default class Launcher extends React.PureComponent {
         optionValue={optionValue}
         setOptionValue={this.setOptionValue}
         isDisabled={isDisabled}
+        inputType={inputType}
+        placeholder={placeholder}
       />
     );
   }
@@ -415,10 +423,18 @@ export default class Launcher extends React.PureComponent {
           this.textInput({
             labelText: "Archipelago Server Link",
             optionName: Permalink.OPTIONS.ARCHIPELAGO_LINK,
+            placeholder: "archipelago.gg:00000",
           }),
           this.textInput({
             labelText: "Archipelago Player Name",
             optionName: Permalink.OPTIONS.ARCHIPELAGO_NAME,
+            placeholder: "Slot Name",
+          }),
+          this.textInput({
+            labelText: "Archipelago Password (optional)",
+            optionName: Permalink.OPTIONS.ARCHIPELAGO_PASSWORD,
+            inputType: "password",
+            placeholder: "Password",
           }),
         ]}
       />
@@ -428,6 +444,9 @@ export default class Launcher extends React.PureComponent {
   async connectAndLaunch() {
     const serverLink = this.getOptionValue(Permalink.OPTIONS.ARCHIPELAGO_LINK);
     const playerName = this.getOptionValue(Permalink.OPTIONS.ARCHIPELAGO_NAME);
+    const password = this.getOptionValue(
+      Permalink.OPTIONS.ARCHIPELAGO_PASSWORD,
+    );
 
     if (!serverLink || !playerName) {
       toast.error(
@@ -440,13 +459,17 @@ export default class Launcher extends React.PureComponent {
       toast.info("Connecting to Archipelago server...");
 
       const client = new Client();
+      const loginOptions = {
+        version: { major: 0, minor: 6, build: 6 },
+      };
+      if (password) {
+        loginOptions.password = password;
+      }
       const slotData = await client.login(
         serverLink,
         playerName,
         "The Wind Waker",
-        {
-          version: { major: 0, minor: 6, build: 6 },
-        },
+        loginOptions,
       );
 
       const seedName = client.room.seedName || "master";
@@ -455,6 +478,7 @@ export default class Launcher extends React.PureComponent {
       const options = SlotDataMapper.mapToOptions(slotData, seedName);
       _.set(options, Permalink.OPTIONS.ARCHIPELAGO_LINK, serverLink);
       _.set(options, Permalink.OPTIONS.ARCHIPELAGO_NAME, playerName);
+      _.set(options, Permalink.OPTIONS.ARCHIPELAGO_PASSWORD, password || "");
 
       this.updateOptions(options);
 
@@ -524,6 +548,10 @@ export default class Launcher extends React.PureComponent {
               alt="The Legend of Zelda: The Wind Waker Randomizer Tracker"
               draggable={false}
             />
+          </div>
+          <div className="password-notice">
+            Password is not stored securely and is only used to connect to the
+            Archipelago server.
           </div>
           <div className="settings">
             {this.archipelagoOptionsTable()}

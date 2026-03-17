@@ -30,6 +30,8 @@ class ArchipelagoInterface {
     this._slotName = Settings.getOptionValue(
       Permalink.OPTIONS.ARCHIPELAGO_NAME,
     );
+    this._password =
+      Settings.getOptionValue(Permalink.OPTIONS.ARCHIPELAGO_PASSWORD) || "";
 
     this.APClient.messages.on("message", (content) => {
       const sanitizedContent = content.replace(/,/g, "");
@@ -78,9 +80,16 @@ class ArchipelagoInterface {
 
   async _connect() {
     try {
-      await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
-        version: AP_VERSION,
-      });
+      const loginOptions = { version: AP_VERSION };
+      if (this._password) {
+        loginOptions.password = this._password;
+      }
+      await this.APClient.login(
+        this._serverUrl,
+        this._slotName,
+        AP_GAME,
+        loginOptions,
+      );
       console.log("Connected to the Archipelago server!");
 
       // Fetch data package for name lookups
@@ -169,9 +178,16 @@ class ArchipelagoInterface {
       console.log(`Reconnecting to Archipelago in ${retryDelay / 1000}s...`);
       setTimeout(async () => {
         try {
-          await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
-            version: AP_VERSION,
-          });
+          const reconnectOptions = { version: AP_VERSION };
+          if (this._password) {
+            reconnectOptions.password = this._password;
+          }
+          await this.APClient.login(
+            this._serverUrl,
+            this._slotName,
+            AP_GAME,
+            reconnectOptions,
+          );
           console.log("Reconnected to the Archipelago server!");
           await this.APClient.package.fetchPackage();
           this._dataPackageLoaded = true;

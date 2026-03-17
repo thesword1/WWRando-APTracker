@@ -59,6 +59,16 @@ body {
         min-width: 200px;
     }
 
+    .password-notice {
+        text-align: center;
+        color: #f0e068;
+        font-size: 1.1em;
+        padding: 6px 20px;
+        background-color: rgba(50, 50, 50, 0.6);
+        margin: 0 20px;
+        border-radius: 4px;
+    }
+
     fieldset {
         margin: 4px 20px;
         border: 1px solid #c8c8c8;
@@ -137,7 +147,8 @@ body {
                         max-width: 100%;
                     }
 
-                    .textbox-container input[type="text"] {
+                    .textbox-container input[type="text"],
+                    .textbox-container input[type="password"] {
                         height: 34px;
                         font-size: 1em;
                         width: 100%;
@@ -145,7 +156,8 @@ body {
                         box-sizing: border-box;
                     }
 
-                    .textbox-container input[type="text"]:disabled {
+                    .textbox-container input[type="text"]:disabled,
+                    .textbox-container input[type="password"]:disabled {
                         cursor: auto;
                     }
 

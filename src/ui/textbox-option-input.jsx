@@ -6,8 +6,15 @@ import Permalink from "../services/permalink";
 
 class TextBoxOptionInput extends React.PureComponent {
   render() {
-    const { isDisabled, labelText, optionName, optionValue, setOptionValue } =
-      this.props;
+    const {
+      isDisabled,
+      inputType,
+      labelText,
+      optionName,
+      optionValue,
+      placeholder,
+      setOptionValue,
+    } = this.props;
 
     /*const App = () => {
       const [, setOptionValue] = useState('test');
@@ -23,8 +30,8 @@ class TextBoxOptionInput extends React.PureComponent {
         <td className="option-container">
           <div className="textbox-container">
             <input
-              type="text"
-              placeholder={labelText}
+              type={inputType || "text"}
+              placeholder={placeholder || labelText}
               value={optionValue}
               onChange={(event) => {
                 setOptionValue(optionName, event.target.value);
