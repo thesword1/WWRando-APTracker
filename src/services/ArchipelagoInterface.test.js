@@ -56,6 +56,7 @@ jest.mock("./permalink", () => ({
   OPTIONS: {
     ARCHIPELAGO_LINK: "archipelago_link",
     ARCHIPELAGO_NAME: "archipelago_name",
+    ARCHIPELAGO_PASSWORD: "archipelago_password",
   },
 }));
 

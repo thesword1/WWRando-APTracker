@@ -107,6 +107,7 @@ exports[`Settings initializeFromPermalink default settings initializes the optio
   "add_shortcut_warps_between_dungeons": false,
   "archipelago_link": "",
   "archipelago_name": "",
+  "archipelago_password": "",
   "big_keylunacy": false,
   "chest_type_matches_contents": false,
   "cryptic_hints": true,

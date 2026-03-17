@@ -36,7 +36,7 @@ describe("Permalink", () => {
   describe("decode", () => {
     test("decodes a permalink", () => {
       const options = Permalink.decode(
-        "bWFzdGVyAEEASRBQMAAA9gWQSwAAAAAAAgAAAABBkRtdmRwIU5rbGkCRG12ZHEgQFAgUW1hemRyIU1hbGQA=",
+        "bWFzdGVyAEEASRBQMAAA9gWQSwAAAAAAAgAAAABBkRtdmRwIU5rbGkCRG12ZHEgQFAgUW1hemRyIU1hbGQAA",
       );
 
       expect(options).toMatchSnapshot();
@@ -72,7 +72,7 @@ describe("Permalink", () => {
 
     beforeEach(() => {
       permalink =
-        "bWFzdGVyAEEASRBQMAAA9gWQSwAAAAAAAgAAAABBkRtdmRwIU5rbGkCRG12ZHEgQFAgUW1hemRyIU1hbGQA=";
+        "bWFzdGVyAEEASRBQMAAA9gWQSwAAAAAAAgAAAABBkRtdmRwIU5rbGkCRG12ZHEgQFAgUW1hemRyIU1hbGQAA";
       options = {
         add_shortcut_warps_between_dungeons: false,
         chest_type_matches_contents: false,
@@ -209,6 +209,7 @@ describe("Permalink", () => {
         version: "master",
         archipelago_link: "Enter Link",
         archipelago_name: "Enter AP Player Name",
+        archipelago_password: "",
       };
     });
 
