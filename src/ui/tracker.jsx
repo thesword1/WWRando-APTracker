@@ -256,6 +256,7 @@ class Tracker extends React.PureComponent {
     // Subsequent item events
     archipelagoConnection.on("itemsReceived", (items) => {
       let trackerState = this._latestTrackerState || this.state.trackerState;
+      const mySlot = archipelagoConnection.getPlayerSlot();
       for (const item of items) {
         try {
           const itemName = mapAPItemName(item.name);
@@ -273,6 +274,7 @@ class Tracker extends React.PureComponent {
               `Auto-tracked item: ${itemName} (${currentCount + 1}/${maxCount})`,
             );
           }
+          this.markHintsFoundByItem(item.name, mySlot);
         } catch (err) {
           console.warn("Could not process received item:", err);
         }
@@ -283,6 +285,7 @@ class Tracker extends React.PureComponent {
     // Subsequent location check events
     archipelagoConnection.on("locationsChecked", (locationIds) => {
       let trackerState = this._latestTrackerState || this.state.trackerState;
+      const mySlot = archipelagoConnection.getPlayerSlot();
       for (const locationId of locationIds) {
         try {
           const locationName =
@@ -299,6 +302,7 @@ class Tracker extends React.PureComponent {
               detailedLocation,
             );
           }
+          this.markHintsFoundByLocation(locationName, mySlot);
         } catch (err) {
           console.warn("Could not process checked location:", locationId, err);
         }
@@ -492,6 +496,8 @@ class Tracker extends React.PureComponent {
         finderGame: hint.item?.sender?.game || "Unknown",
         receiverName: hint.item?.receiver?.name || "Unknown",
         receiverGame: hint.item?.receiver?.game || "Unknown",
+        senderSlot: hint.item?.sender?.slot,
+        receiverSlot: hint.item?.receiver?.slot,
         found: hint.found || false,
       };
 
@@ -539,6 +545,63 @@ class Tracker extends React.PureComponent {
       hintsForMe: newHintsForMe,
       myHints: newMyHints,
     });
+  }
+
+  markHintsFoundByLocation(locationName, mySlot) {
+    const { hintsForMe, myHints } = this.state;
+    let changed = false;
+
+    // Mark hints in myHints (other's items at my locations)
+    const updatedMyHints = myHints.map((hint) => {
+      if (!hint.found && hint.locationName === locationName) {
+        changed = true;
+        return { ...hint, found: true };
+      }
+      return hint;
+    });
+
+    // Mark hints in hintsForMe where the location is in my own world
+    const updatedHintsForMe = hintsForMe.map((hint) => {
+      if (
+        !hint.found &&
+        hint.locationName === locationName &&
+        hint.senderSlot === mySlot
+      ) {
+        changed = true;
+        return { ...hint, found: true };
+      }
+      return hint;
+    });
+
+    if (changed) {
+      this.setState({
+        hintsForMe: updatedHintsForMe,
+        myHints: updatedMyHints,
+      });
+    }
+  }
+
+  markHintsFoundByItem(itemName, mySlot) {
+    const { hintsForMe } = this.state;
+    let changed = false;
+
+    // Only mark hints where the item is from someone else's world
+    // Items from my own world are handled by markHintsFoundByLocation
+    const updatedHintsForMe = hintsForMe.map((hint) => {
+      if (
+        !hint.found &&
+        hint.itemName === itemName &&
+        hint.senderSlot !== mySlot
+      ) {
+        changed = true;
+        return { ...hint, found: true };
+      }
+      return hint;
+    });
+
+    if (changed) {
+      this.setState({ hintsForMe: updatedHintsForMe });
+    }
   }
 
   toggleHintPanel() {

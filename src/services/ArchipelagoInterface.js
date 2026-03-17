@@ -4,6 +4,7 @@ import Permalink from "./permalink";
 
 const AP_VERSION = { major: 0, minor: 6, build: 6 };
 const AP_GAME = "The Wind Waker";
+const AP_TAGS = ["Tracker", "NoText"];
 
 class ArchipelagoInterface {
   constructor(param) {
@@ -83,6 +84,7 @@ class ArchipelagoInterface {
       await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
         version: AP_VERSION,
         password: this._password,
+        tags: AP_TAGS,
       });
       console.log("Connected to the Archipelago server!");
 
@@ -175,6 +177,7 @@ class ArchipelagoInterface {
           await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
             version: AP_VERSION,
             password: this._password,
+            tags: AP_TAGS,
           });
           console.log("Reconnected to the Archipelago server!");
           await this.APClient.package.fetchPackage();

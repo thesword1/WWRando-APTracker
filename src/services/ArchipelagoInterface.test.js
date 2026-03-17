@@ -309,6 +309,23 @@ describe("ArchipelagoInterface", () => {
       expect(listener).toHaveBeenCalled();
     });
 
+    test("passes Tracker and NoText tags in login options", async () => {
+      const mockLogin = require("archipelago.js").__mockLogin;
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      expect(mockLogin).toHaveBeenCalledWith(
+        "ws://localhost:38281",
+        "TestPlayer",
+        "The Wind Waker",
+        expect.objectContaining({
+          tags: ["Tracker", "NoText"],
+        }),
+      );
+    });
+
     test("logs error on failed connection", async () => {
       const mockLogin = require("archipelago.js").__mockLogin;
 
@@ -380,6 +397,34 @@ describe("ArchipelagoInterface", () => {
 
       expect(apInterface._reconnecting).toEqual(false);
       expect(apInterface._connected).toEqual(true);
+    });
+
+    test("passes Tracker and NoText tags in reconnect login options", async () => {
+      const mockLogin = require("archipelago.js").__mockLogin;
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      mockLogin.mockClear();
+
+      apInterface._reconnecting = false;
+      apInterface._connected = false;
+      apInterface._scheduleReconnect();
+
+      jest.advanceTimersByTime(5000);
+      await Promise.resolve();
+      await Promise.resolve();
+      await Promise.resolve();
+
+      expect(mockLogin).toHaveBeenCalledWith(
+        "ws://localhost:38281",
+        "TestPlayer",
+        "The Wind Waker",
+        expect.objectContaining({
+          tags: ["Tracker", "NoText"],
+        }),
+      );
     });
 
     test("retries with exponential backoff on failure", async () => {

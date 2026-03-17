@@ -461,6 +461,7 @@ export default class Launcher extends React.PureComponent {
       const client = new Client();
       const loginOptions = {
         version: { major: 0, minor: 6, build: 6 },
+        tags: ["Tracker", "NoText"],
       };
       if (password) {
         loginOptions.password = password;
