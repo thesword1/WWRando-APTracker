@@ -248,11 +248,7 @@ class Tracker extends React.PureComponent {
       // Apply all state changes in one update
       this.updateTrackerState(trackerState);
 
-      // Sync hints
-      const hints = archipelagoConnection.getHints();
-      if (hints && hints.length > 0) {
-        this.processHints(hints, archipelagoConnection);
-      }
+      // Hints are synced via the "hintsInitialized" event listener
 
       this.setState({ isLoading: false });
       console.log("State sync complete.");
@@ -553,11 +549,29 @@ class Tracker extends React.PureComponent {
       );
 
       if (isMyItem) {
-        newHintsForMe.push(hintData);
+        const isDuplicate = newHintsForMe.some(
+          (h) =>
+            h.itemName === hintData.itemName &&
+            h.locationName === hintData.locationName &&
+            h.senderSlot === hintData.senderSlot &&
+            h.receiverSlot === hintData.receiverSlot,
+        );
+        if (!isDuplicate) {
+          newHintsForMe.push(hintData);
+        }
       }
 
       if (isMyWorldLocation && !isMyItem) {
-        newMyHints.push(hintData);
+        const isDuplicate = newMyHints.some(
+          (h) =>
+            h.itemName === hintData.itemName &&
+            h.locationName === hintData.locationName &&
+            h.senderSlot === hintData.senderSlot &&
+            h.receiverSlot === hintData.receiverSlot,
+        );
+        if (!isDuplicate) {
+          newMyHints.push(hintData);
+        }
       }
 
       // Mark hinted locations for purple border (applies for all hints in my world)
