@@ -80,16 +80,10 @@ class ArchipelagoInterface {
 
   async _connect() {
     try {
-      const loginOptions = { version: AP_VERSION };
-      if (this._password) {
-        loginOptions.password = this._password;
-      }
-      await this.APClient.login(
-        this._serverUrl,
-        this._slotName,
-        AP_GAME,
-        loginOptions,
-      );
+      await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
+        version: AP_VERSION,
+        password: this._password,
+      });
       console.log("Connected to the Archipelago server!");
 
       // Fetch data package for name lookups
@@ -178,16 +172,10 @@ class ArchipelagoInterface {
       console.log(`Reconnecting to Archipelago in ${retryDelay / 1000}s...`);
       setTimeout(async () => {
         try {
-          const reconnectOptions = { version: AP_VERSION };
-          if (this._password) {
-            reconnectOptions.password = this._password;
-          }
-          await this.APClient.login(
-            this._serverUrl,
-            this._slotName,
-            AP_GAME,
-            reconnectOptions,
-          );
+          await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
+            version: AP_VERSION,
+            password: this._password,
+          });
           console.log("Reconnected to the Archipelago server!");
           await this.APClient.package.fetchPackage();
           this._dataPackageLoaded = true;
