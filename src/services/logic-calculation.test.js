@@ -141,6 +141,46 @@ describe("LogicCalculation", () => {
         });
       });
 
+      describe("when only small key lunacy is enabled", () => {
+        beforeEach(() => {
+          fullSetup({
+            options: {
+              [Permalink.OPTIONS.SMALL_KEYLUNACY]: true,
+              [Permalink.OPTIONS.BIG_KEYLUNACY]: false,
+            },
+          });
+
+          state = TrackerState.default();
+        });
+
+        test("skips small key guarantees but still sets big key guarantees", () => {
+          logic = new LogicCalculation(state);
+
+          expect(logic.guaranteedKeys["DRC Small Key"]).toEqual(0);
+          expect(logic.guaranteedKeys["FW Small Key"]).toEqual(0);
+        });
+      });
+
+      describe("when only big key lunacy is enabled", () => {
+        beforeEach(() => {
+          fullSetup({
+            options: {
+              [Permalink.OPTIONS.SMALL_KEYLUNACY]: false,
+              [Permalink.OPTIONS.BIG_KEYLUNACY]: true,
+            },
+          });
+
+          state = TrackerState.default();
+        });
+
+        test("skips big key guarantees but still sets small key guarantees", () => {
+          logic = new LogicCalculation(state);
+
+          expect(logic.guaranteedKeys["DRC Big Key"]).toEqual(0);
+          expect(logic.guaranteedKeys["DRC Small Key"]).toEqual(2);
+        });
+      });
+
       describe("when only having the default items", () => {
         beforeEach(() => {
           state = TrackerState.default();

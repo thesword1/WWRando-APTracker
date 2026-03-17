@@ -221,6 +221,24 @@ describe("SlotDataMapper", () => {
         }
       });
 
+      test("falls back to None for invalid logic_obscurity index", () => {
+        const options = SlotDataMapper.mapToOptions({
+          ...fullSlotData,
+          logic_obscurity: 99,
+        });
+
+        expect(options.logic_obscurity).toBe("None");
+      });
+
+      test("falls back to None for invalid logic_precision index", () => {
+        const options = SlotDataMapper.mapToOptions({
+          ...fullSlotData,
+          logic_precision: 99,
+        });
+
+        expect(options.logic_precision).toBe("None");
+      });
+
       test("maps mix_entrances 0 to Separate", () => {
         const options = SlotDataMapper.mapToOptions({
           ...fullSlotData,
@@ -240,6 +258,17 @@ describe("SlotDataMapper", () => {
 
         expect(options.mix_entrances).toBe(
           "Mix Dungeons and Caves and Fountains",
+        );
+      });
+
+      test("falls back to Separate for invalid mix_entrances index", () => {
+        const options = SlotDataMapper.mapToOptions({
+          ...fullSlotData,
+          mix_entrances: 99,
+        });
+
+        expect(options.mix_entrances).toBe(
+          "Separate Dungeons From Caves and Fountains",
         );
       });
 

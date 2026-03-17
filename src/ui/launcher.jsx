@@ -534,6 +534,10 @@ export default class Launcher extends React.PureComponent {
             Password is not stored securely and is only used to connect to the
             Archipelago server.
           </div>
+          <div className="beta-notice">
+            Currently the ER Randomizer feature is in beta - Please report any
+            bugs
+          </div>
           <div className="settings">
             {this.archipelagoOptionsTable()}
             {this.launchButtonContainer()}

@@ -9,6 +9,7 @@ import LogicHelper from "../services/logic-helper";
 import Permalink from "../services/permalink";
 import TrackerController from "../services/tracker-controller";
 import ArchipelagoInterface from "../services/ArchipelagoInterface";
+import { computeEntranceMappings } from "../services/entrance-auto-tracker";
 
 import Buttons from "./buttons";
 import Images from "./images";
@@ -187,9 +188,13 @@ class Tracker extends React.PureComponent {
       }
     });
 
+    // Track which stages have been processed for entrance auto-mapping
+    let processedStages = new Set();
+
     // State sync on connection
     archipelagoConnection.on("connected", () => {
       console.log("Syncing state from AP server...");
+      processedStages = new Set();
 
       let trackerState = this._latestTrackerState || this.state.trackerState;
 
@@ -319,6 +324,43 @@ class Tracker extends React.PureComponent {
     archipelagoConnection.on("hintReceived", (hint) => {
       console.log("hintReceived event fired, hint:", hint);
       this.processHints([hint], archipelagoConnection);
+    });
+
+    // Entrance auto-tracking from visited stages
+    archipelagoConnection.on("visitedStagesUpdated", (visitedStages) => {
+      if (!LogicHelper.isRandomEntrances()) return;
+
+      const reversePairings =
+        archipelagoConnection.getReverseEntrancePairings();
+      if (!reversePairings || Object.keys(reversePairings).length === 0) return;
+
+      const randomEntranceSet = new Set(LogicHelper.allRandomEntrances());
+      let trackerState = this._latestTrackerState || this.state.trackerState;
+
+      const mappings = computeEntranceMappings(
+        visitedStages,
+        reversePairings,
+        randomEntranceSet,
+        processedStages,
+        trackerState,
+      );
+
+      if (mappings.length > 0) {
+        for (const {
+          entranceInternalName,
+          exitInternalName,
+          stageName,
+        } of mappings) {
+          trackerState = trackerState.setExitForEntrance(
+            entranceInternalName,
+            exitInternalName,
+          );
+          console.log(
+            `Auto-mapped entrance: ${entranceInternalName} -> ${exitInternalName} (stage: ${stageName})`,
+          );
+        }
+        this.updateTrackerState(trackerState);
+      }
     });
 
     const { logic, saveData, spheres, trackerState } = initialData;
