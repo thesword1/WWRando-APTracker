@@ -5,6 +5,8 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Only run on direct pushes/merges to main, not on PR events
+
 permissions:
   contents: read
   pages: write
