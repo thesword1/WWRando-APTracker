@@ -61,11 +61,21 @@ body {
 
     .password-notice {
         text-align: center;
-        color: #f0e068;
+        color: #ff4444;
         font-size: 1.1em;
         padding: 6px 20px;
         background-color: rgba(50, 50, 50, 0.6);
         margin: 0 20px;
+        border-radius: 4px;
+    }
+
+    .beta-notice {
+        text-align: center;
+        color: #ffd700;
+        font-size: 1.1em;
+        padding: 6px 20px;
+        background-color: rgba(50, 50, 50, 0.6);
+        margin: 10px 20px 0 20px;
         border-radius: 4px;
     }
 
