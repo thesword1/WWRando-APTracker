@@ -1,10 +1,18 @@
 import { Client } from "archipelago.js";
 import Settings from "./settings";
 import Permalink from "./permalink";
+import DUNGEON_ENTRANCES from "../data/dungeon-entrances.json";
+import ISLAND_ENTRANCES from "../data/island-entrances.json";
 
 const AP_VERSION = { major: 0, minor: 6, build: 6 };
 const AP_GAME = "The Wind Waker";
 const AP_TAGS = ["Tracker", "NoText"];
+
+// Build entranceMacroName -> internalName lookup from entrance data
+const MACRO_TO_INTERNAL = {};
+[...DUNGEON_ENTRANCES, ...ISLAND_ENTRANCES].forEach((e) => {
+  MACRO_TO_INTERNAL[e.entranceMacroName] = e.internalName;
+});
 
 class ArchipelagoInterface {
   constructor(param) {
@@ -25,6 +33,8 @@ class ArchipelagoInterface {
     this._reconnecting = false;
     this._connected = false;
     this._dataPackageLoaded = false;
+    this._entrancePairings = {};
+    this._reverseEntrancePairings = {};
     this._serverUrl = Settings.getOptionValue(
       Permalink.OPTIONS.ARCHIPELAGO_LINK,
     );
@@ -81,12 +91,19 @@ class ArchipelagoInterface {
 
   async _connect() {
     try {
-      await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
-        version: AP_VERSION,
-        password: this._password,
-        tags: AP_TAGS,
-      });
+      const slotData = await this.APClient.login(
+        this._serverUrl,
+        this._slotName,
+        AP_GAME,
+        {
+          version: AP_VERSION,
+          password: this._password,
+          tags: AP_TAGS,
+        },
+      );
       console.log("Connected to the Archipelago server!");
+
+      this._extractEntrancePairings(slotData);
 
       // Fetch data package for name lookups
       await this.APClient.package.fetchPackage();
@@ -96,6 +113,8 @@ class ArchipelagoInterface {
       // Wait one tick so any pending ReceivedItems packets from the server
       // are processed before we emit "connected" for initial state sync.
       await new Promise((resolve) => setTimeout(resolve, 100));
+
+      await this._setupVisitedStagesTracking();
 
       this._connected = true;
       this.emit("connected");
@@ -145,6 +164,54 @@ class ArchipelagoInterface {
     );
   }
 
+  getEntrancePairings() {
+    return this._entrancePairings;
+  }
+
+  getReverseEntrancePairings() {
+    return this._reverseEntrancePairings;
+  }
+
+  _extractEntrancePairings(slotData) {
+    this._entrancePairings = {};
+    this._reverseEntrancePairings = {};
+
+    if (!slotData || !slotData.entrances) {
+      return;
+    }
+
+    for (const [macroName, exitName] of Object.entries(slotData.entrances)) {
+      const entranceInternalName = MACRO_TO_INTERNAL[macroName];
+      if (entranceInternalName) {
+        this._entrancePairings[entranceInternalName] = exitName;
+        this._reverseEntrancePairings[exitName] = entranceInternalName;
+      }
+    }
+
+    console.log(
+      `Loaded ${Object.keys(this._entrancePairings).length} entrance pairings.`,
+    );
+  }
+
+  async _setupVisitedStagesTracking() {
+    const slot = this.getPlayerSlot();
+    if (!slot) return;
+
+    const key = `tww_visited_stages_${slot}`;
+
+    try {
+      const data = await this.APClient.storage.notify([key], (_k, newValue) => {
+        this.emit("visitedStagesUpdated", newValue || {});
+      });
+
+      // Emit initial data from the fetch
+      const initialVisitedStages = data[key] || {};
+      this.emit("visitedStagesUpdated", initialVisitedStages);
+    } catch (err) {
+      console.error("Failed to setup visited stages tracking:", err);
+    }
+  }
+
   on(event, listener) {
     if (!this.events[event]) {
       this.events[event] = [];
@@ -174,15 +241,22 @@ class ArchipelagoInterface {
       console.log(`Reconnecting to Archipelago in ${retryDelay / 1000}s...`);
       setTimeout(async () => {
         try {
-          await this.APClient.login(this._serverUrl, this._slotName, AP_GAME, {
-            version: AP_VERSION,
-            password: this._password,
-            tags: AP_TAGS,
-          });
+          const slotData = await this.APClient.login(
+            this._serverUrl,
+            this._slotName,
+            AP_GAME,
+            {
+              version: AP_VERSION,
+              password: this._password,
+              tags: AP_TAGS,
+            },
+          );
           console.log("Reconnected to the Archipelago server!");
+          this._extractEntrancePairings(slotData);
           await this.APClient.package.fetchPackage();
           this._dataPackageLoaded = true;
           await new Promise((resolve) => setTimeout(resolve, 100));
+          await this._setupVisitedStagesTracking();
           this._reconnecting = false;
           this._connected = true;
           this.emit("connected");

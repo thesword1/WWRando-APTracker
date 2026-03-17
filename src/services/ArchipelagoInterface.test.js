@@ -5,10 +5,11 @@ import Permalink from "./permalink";
 // Mock archipelago.js Client
 jest.mock("archipelago.js", () => {
   const mockOn = jest.fn();
-  const mockLogin = jest.fn().mockResolvedValue(undefined);
+  const mockLogin = jest.fn().mockResolvedValue({});
   const mockFetchPackage = jest.fn().mockResolvedValue(undefined);
   const mockLookupLocationName = jest.fn();
   const mockLookupItemName = jest.fn();
+  const mockStorageNotify = jest.fn().mockResolvedValue({});
 
   return {
     Client: jest.fn().mockImplementation(() => ({
@@ -34,6 +35,9 @@ jest.mock("archipelago.js", () => {
         lookupLocationName: mockLookupLocationName,
         lookupItemName: mockLookupItemName,
       },
+      storage: {
+        notify: mockStorageNotify,
+      },
       login: mockLogin,
       authenticated: true,
     })),
@@ -42,6 +46,7 @@ jest.mock("archipelago.js", () => {
     __mockFetchPackage: mockFetchPackage,
     __mockLookupLocationName: mockLookupLocationName,
     __mockLookupItemName: mockLookupItemName,
+    __mockStorageNotify: mockStorageNotify,
   };
 });
 
@@ -303,6 +308,9 @@ describe("ArchipelagoInterface", () => {
 
       // Advance past the 100ms delay before "connected" is emitted
       jest.advanceTimersByTime(100);
+      // Wait for setTimeout promise + _setupVisitedStagesTracking (storage.notify)
+      await Promise.resolve();
+      await Promise.resolve();
       await Promise.resolve();
 
       expect(apInterface._connected).toEqual(true);
@@ -393,6 +401,9 @@ describe("ArchipelagoInterface", () => {
 
       // Advance past the 100ms delay before "connected" is emitted
       jest.advanceTimersByTime(100);
+      // Wait for setTimeout promise + _setupVisitedStagesTracking (storage.notify)
+      await Promise.resolve();
+      await Promise.resolve();
       await Promise.resolve();
 
       expect(apInterface._reconnecting).toEqual(false);
@@ -457,7 +468,7 @@ describe("ArchipelagoInterface", () => {
 
       // Retry should be scheduled at 10s (5000 * 2)
       // Make next login succeed
-      mockLogin.mockResolvedValueOnce(undefined);
+      mockLogin.mockResolvedValueOnce({});
       jest.advanceTimersByTime(10000);
       await Promise.resolve();
       await Promise.resolve();
@@ -465,6 +476,9 @@ describe("ArchipelagoInterface", () => {
 
       // Advance past the 100ms delay before "connected" is emitted
       jest.advanceTimersByTime(100);
+      // Wait for setTimeout promise + _setupVisitedStagesTracking (storage.notify)
+      await Promise.resolve();
+      await Promise.resolve();
       await Promise.resolve();
 
       expect(apInterface._reconnecting).toEqual(false);
@@ -633,6 +647,228 @@ describe("ArchipelagoInterface", () => {
       expect(apInterface._reconnecting).toEqual(true);
 
       warnSpy.mockRestore();
+    });
+  });
+
+  describe("_extractEntrancePairings", () => {
+    test("extracts entrance pairings from slot data", () => {
+      apInterface = new ArchipelagoInterface("testPermalink");
+
+      apInterface._extractEntrancePairings({
+        entrances: {
+          "Dungeon Entrance on Dragon Roost Island": "Forbidden Woods",
+          "Secret Cave Entrance on Outset Island":
+            "Dragon Roost Island Secret Cave",
+        },
+      });
+
+      expect(apInterface.getEntrancePairings()).toEqual({
+        "Dragon Roost Cavern": "Forbidden Woods",
+        "Savage Labyrinth": "Dragon Roost Island Secret Cave",
+      });
+      expect(apInterface.getReverseEntrancePairings()).toEqual({
+        "Forbidden Woods": "Dragon Roost Cavern",
+        "Dragon Roost Island Secret Cave": "Savage Labyrinth",
+      });
+    });
+
+    test("handles missing entrances key gracefully", () => {
+      apInterface = new ArchipelagoInterface("testPermalink");
+
+      apInterface._extractEntrancePairings({});
+
+      expect(apInterface.getEntrancePairings()).toEqual({});
+      expect(apInterface.getReverseEntrancePairings()).toEqual({});
+    });
+
+    test("handles null slot data gracefully", () => {
+      apInterface = new ArchipelagoInterface("testPermalink");
+
+      apInterface._extractEntrancePairings(null);
+
+      expect(apInterface.getEntrancePairings()).toEqual({});
+      expect(apInterface.getReverseEntrancePairings()).toEqual({});
+    });
+
+    test("skips unknown entrance macro names", () => {
+      apInterface = new ArchipelagoInterface("testPermalink");
+
+      apInterface._extractEntrancePairings({
+        entrances: {
+          "Unknown Entrance on Mystery Island": "Some Exit",
+          "Dungeon Entrance on Dragon Roost Island": "Dragon Roost Cavern",
+        },
+      });
+
+      expect(apInterface.getEntrancePairings()).toEqual({
+        "Dragon Roost Cavern": "Dragon Roost Cavern",
+      });
+    });
+  });
+
+  describe("_setupVisitedStagesTracking", () => {
+    test("returns early if no player slot", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      // Override getPlayerSlot to return null
+      apInterface.getPlayerSlot = jest.fn().mockReturnValue(null);
+      mockStorageNotify.mockClear();
+
+      await apInterface._setupVisitedStagesTracking();
+
+      expect(mockStorageNotify).not.toHaveBeenCalled();
+    });
+
+    test("calls storage.notify with correct key", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+      mockStorageNotify.mockResolvedValue({
+        tww_visited_stages_1: { M_NewD2: true },
+      });
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      await apInterface._setupVisitedStagesTracking();
+
+      expect(mockStorageNotify).toHaveBeenCalledWith(
+        ["tww_visited_stages_1"],
+        expect.any(Function),
+      );
+    });
+
+    test("emits visitedStagesUpdated with initial data", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+      mockStorageNotify.mockResolvedValue({
+        tww_visited_stages_1: { M_NewD2: true, kindan: true },
+      });
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      const listener = jest.fn();
+      apInterface.on("visitedStagesUpdated", listener);
+
+      await apInterface._setupVisitedStagesTracking();
+
+      expect(listener).toHaveBeenCalledWith({ M_NewD2: true, kindan: true });
+    });
+
+    test("emits visitedStagesUpdated when notify callback fires", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+      let notifyCallback;
+      mockStorageNotify.mockImplementation((keys, cb) => {
+        notifyCallback = cb;
+        return Promise.resolve({ tww_visited_stages_1: {} });
+      });
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      const listener = jest.fn();
+      apInterface.on("visitedStagesUpdated", listener);
+
+      await apInterface._setupVisitedStagesTracking();
+      listener.mockClear();
+
+      notifyCallback("tww_visited_stages_1", { M_NewD2: true });
+
+      expect(listener).toHaveBeenCalledWith({ M_NewD2: true });
+    });
+
+    test("emits empty object when notify callback fires with null value", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+      let notifyCallback;
+      mockStorageNotify.mockImplementation((keys, cb) => {
+        notifyCallback = cb;
+        return Promise.resolve({ tww_visited_stages_1: {} });
+      });
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      const listener = jest.fn();
+      apInterface.on("visitedStagesUpdated", listener);
+
+      await apInterface._setupVisitedStagesTracking();
+      listener.mockClear();
+
+      notifyCallback("tww_visited_stages_1", null);
+
+      expect(listener).toHaveBeenCalledWith({});
+    });
+
+    test("handles storage.notify failure gracefully", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+      mockStorageNotify.mockRejectedValue(new Error("Storage error"));
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      const consoleSpy = jest
+        .spyOn(console, "error")
+        .mockImplementation(() => {});
+
+      await expect(
+        apInterface._setupVisitedStagesTracking(),
+      ).resolves.not.toThrow();
+
+      expect(consoleSpy).toHaveBeenCalledWith(
+        "Failed to setup visited stages tracking:",
+        expect.any(Error),
+      );
+
+      consoleSpy.mockRestore();
+    });
+
+    test("emits empty object when key has no data", async () => {
+      const mockStorageNotify = require("archipelago.js").__mockStorageNotify;
+      mockStorageNotify.mockResolvedValue({});
+
+      apInterface = new ArchipelagoInterface("testPermalink");
+      await Promise.resolve();
+      await Promise.resolve();
+
+      const listener = jest.fn();
+      apInterface.on("visitedStagesUpdated", listener);
+
+      await apInterface._setupVisitedStagesTracking();
+
+      expect(listener).toHaveBeenCalledWith({});
+    });
+  });
+
+  describe("getEntrancePairings and getReverseEntrancePairings", () => {
+    test("returns empty objects by default", () => {
+      apInterface = new ArchipelagoInterface("testPermalink");
+
+      expect(apInterface.getEntrancePairings()).toEqual({});
+      expect(apInterface.getReverseEntrancePairings()).toEqual({});
+    });
+
+    test("returns pairings after extraction", () => {
+      apInterface = new ArchipelagoInterface("testPermalink");
+
+      apInterface._extractEntrancePairings({
+        entrances: {
+          "Dungeon Entrance on Dragon Roost Island": "Dragon Roost Cavern",
+        },
+      });
+
+      expect(apInterface.getEntrancePairings()).toEqual({
+        "Dragon Roost Cavern": "Dragon Roost Cavern",
+      });
+      expect(apInterface.getReverseEntrancePairings()).toEqual({
+        "Dragon Roost Cavern": "Dragon Roost Cavern",
+      });
     });
   });
 });
