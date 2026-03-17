@@ -120,7 +120,7 @@ https://thesword1.github.io/WWRando-APTracker/#/launch?host=<server:port>&slot=<
 
 | Parameter  | Required | Description |
 |------------|----------|-------------|
-| `host`     | Yes      | The AP server address and port (e.g. `archipelago.gg:38281`, `multiworld.gg:87965`) |
+| `host`     | Yes      | The AP server address and port (e.g. `archipelago.gg:38281`, `fork.gg:87965`) |
 | `slot`     | Yes      | Your player/slot name. Special characters are percent-encoded (e.g. `thesword1'sWorld` becomes `thesword1%27sWorld`) |
 | `password` | No       | The server password, if one is set. Omit this parameter entirely if no password is needed |
 
