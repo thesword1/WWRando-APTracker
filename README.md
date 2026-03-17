@@ -106,6 +106,34 @@ Key behaviors:
 - Resume a session via the `/tracker/load/:permalink` route
 - Start a new session via `/tracker/new/:permalink`
 
+### Direct Launch via URL
+
+The tracker can be launched directly from a URL using query parameters, bypassing the launcher page entirely. This is useful for embedding links on external sites (e.g. an Archipelago server's room page) that open the tracker and connect automatically.
+
+**URL format:**
+
+```
+https://thesword1.github.io/WWRando-APTracker/#/launch?host=<server:port>&slot=<slotName>&password=<password>
+```
+
+**Parameters:**
+
+| Parameter  | Required | Description |
+|------------|----------|-------------|
+| `host`     | Yes      | The AP server address and port (e.g. `archipelago.gg:38281`, `multiworld.gg:87965`) |
+| `slot`     | Yes      | Your player/slot name. Special characters are percent-encoded (e.g. `SeaWordy'sWorld` becomes `SeaWordy%27sWorld`) |
+| `password` | No       | The server password, if one is set. Omit this parameter entirely if no password is needed |
+
+**Examples:**
+
+```
+https://thesword1.github.io/WWRando-APTracker/#/launch?host=archipelago.gg:38281&slot=PlayerOne
+
+https://thesword1.github.io/WWRando-APTracker/#/launch?host=multiworld.gg:87965&slot=SeaWordy%27sWorld&password=secret
+```
+
+When visited, the URL connects to the AP server, fetches the slot data and randomizer settings, then renders the tracker directly in the same tab. A loading spinner is shown during the connection. If the connection fails or required parameters are missing, an error message is displayed with a link back to the launcher.
+
 ## Build Instructions
 
 Building and running the tracker locally requires [Node 20](https://nodejs.org/en/download/) and [Git](https://git-scm.com/downloads).
