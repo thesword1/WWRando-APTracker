@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import Locations from "../services/locations";
 import LogicHelper from "../services/logic-helper";
+import Permalink from "../services/permalink";
 import TrackerController from "../services/tracker-controller";
 import ArchipelagoInterface from "../services/ArchipelagoInterface";
 
@@ -65,8 +66,7 @@ class Tracker extends React.PureComponent {
     this.toggleSettingsWindow = this.toggleSettingsWindow.bind(this);
     this.toggleEntrances = this.toggleEntrances.bind(this);
     this.toggleLocationChecked = this.toggleLocationChecked.bind(this);
-    this.toggleOnlyProgressLocations =
-      this.toggleOnlyProgressLocations.bind(this);
+
     this.toggleRequiredBoss = this.toggleRequiredBoss.bind(this);
     this.unsetChartMapping = this.unsetChartMapping.bind(this);
     this.unsetEntrance = this.unsetEntrance.bind(this);
@@ -98,54 +98,41 @@ class Tracker extends React.PureComponent {
 
     let initialData;
 
+    let decodedPermalink;
+
     if (loadProgress) {
       const saveData = Storage.loadFromStorage();
 
       if (!_.isNil(saveData)) {
         try {
-          initialData = TrackerController.initializeFromSaveData(saveData);
-          toast.success("Progress loaded!");
+          const { settings } = JSON.parse(saveData);
+          const options = settings.options;
+          decodedPermalink = Permalink.encode(options);
         } catch (err) {
-          TrackerController.reset();
+          toast.error("Could not load progress from save data!");
         }
-
-        try {
-          archipelagoConnection = new ArchipelagoInterface(saveData);
-        } catch {}
-      }
-
-      if (_.isNil(initialData)) {
-        toast.error("Could not load progress from save data!");
-      }
-
-      if (_.isNil(archipelagoConnection)) {
+      } else {
         toast.error("Could not load progress from save data!");
       }
     }
 
-    if (_.isNil(initialData)) {
-      try {
-        const decodedPermalink = decodeURIComponent(permalink);
-
-        initialData =
-          await TrackerController.initializeFromPermalink(decodedPermalink);
-      } catch (err) {
-        toast.error("Tracker could not be initialized!");
-
-        throw err;
-      }
+    if (_.isNil(decodedPermalink)) {
+      decodedPermalink = decodeURIComponent(permalink);
     }
 
-    if (_.isNil(archipelagoConnection)) {
-      try {
-        const decodedPermalink = decodeURIComponent(permalink);
+    try {
+      initialData =
+        await TrackerController.initializeFromPermalink(decodedPermalink);
+    } catch (err) {
+      toast.error("Tracker could not be initialized!");
+      throw err;
+    }
 
-        archipelagoConnection = new ArchipelagoInterface(decodedPermalink);
-      } catch (err) {
-        toast.error("Archipelago Tracker could not be initialized!");
-
-        throw err;
-      }
+    try {
+      archipelagoConnection = new ArchipelagoInterface(decodedPermalink);
+    } catch (err) {
+      toast.error("Archipelago Tracker could not be initialized!");
+      throw err;
     }
 
     const locationQueue = [];
@@ -164,16 +151,28 @@ class Tracker extends React.PureComponent {
 
       if (data.includes(playerName + " found their")) {
         console.log(data);
-        const itemName = mapAPItemName(parseFoundItem(data));
-        this.handleArchipelagoFoundItem(data, itemName);
-      } else if (
-        data.includes(" sent ") &&
-        data.includes(" to " + playerName)
-      ) {
-        console.log(data);
-        const itemName = mapAPItemName(parseSentItem(data, playerName));
-        if (itemName) {
-          this.autoIncrementItem(itemName);
+        // Only mark location as checked; item incrementing is handled by itemsReceived
+        const locationMatch = parseLocation(data);
+        if (locationMatch) {
+          const generalLocation = locationMatch[1];
+          const detailedLocation = locationMatch[2];
+          const trackerState =
+            this._latestTrackerState || this.state.trackerState;
+          if (
+            !trackerState.isLocationChecked(generalLocation, detailedLocation)
+          ) {
+            const newTrackerState = trackerState.toggleLocationChecked(
+              generalLocation,
+              detailedLocation,
+            );
+            this.setState({
+              lastLocation: { generalLocation, detailedLocation },
+            });
+            this.updateTrackerState(newTrackerState);
+            console.log(locationMatch[0] + " has been marked as checked");
+          } else {
+            console.log(locationMatch[0] + " was already checked");
+          }
         }
       }
 
@@ -192,7 +191,7 @@ class Tracker extends React.PureComponent {
     archipelagoConnection.on("connected", () => {
       console.log("Syncing state from AP server...");
 
-      let { trackerState } = this.state;
+      let trackerState = this._latestTrackerState || this.state.trackerState;
 
       // Sync received items — build up state without intermediate renders
       const receivedItems = archipelagoConnection.getReceivedItems();
@@ -256,7 +255,7 @@ class Tracker extends React.PureComponent {
 
     // Subsequent item events
     archipelagoConnection.on("itemsReceived", (items) => {
-      let { trackerState } = this.state;
+      let trackerState = this._latestTrackerState || this.state.trackerState;
       for (const item of items) {
         try {
           const itemName = mapAPItemName(item.name);
@@ -283,7 +282,7 @@ class Tracker extends React.PureComponent {
 
     // Subsequent location check events
     archipelagoConnection.on("locationsChecked", (locationIds) => {
-      let { trackerState } = this.state;
+      let trackerState = this._latestTrackerState || this.state.trackerState;
       for (const locationId of locationIds) {
         try {
           const locationName =
@@ -309,15 +308,18 @@ class Tracker extends React.PureComponent {
 
     // Hint events
     archipelagoConnection.on("hintsInitialized", (hints) => {
+      console.log("hintsInitialized event fired, hints:", hints);
       this.processHints(hints, archipelagoConnection);
     });
 
     archipelagoConnection.on("hintReceived", (hint) => {
+      console.log("hintReceived event fired, hint:", hint);
       this.processHints([hint], archipelagoConnection);
     });
 
     const { logic, saveData, spheres, trackerState } = initialData;
 
+    this._latestTrackerState = trackerState;
     this.setState({
       logic,
       saveData,
@@ -465,8 +467,24 @@ class Tracker extends React.PureComponent {
     const newMyHints = [...myHints];
 
     const mySlot = archipelagoConnection.getPlayerSlot();
+    console.log(
+      "processHints called, mySlot:",
+      mySlot,
+      "hints count:",
+      hints.length,
+    );
 
     for (const hint of hints) {
+      console.log("Processing hint:", {
+        itemName: hint.item?.name,
+        locationName: hint.item?.locationName,
+        senderSlot: hint.item?.sender?.slot,
+        senderName: hint.item?.sender?.name,
+        receiverSlot: hint.item?.receiver?.slot,
+        receiverName: hint.item?.receiver?.name,
+        found: hint.found,
+      });
+
       const hintData = {
         itemName: hint.item?.name || "Unknown Item",
         locationName: hint.item?.locationName || "Unknown Location",
@@ -479,15 +497,23 @@ class Tracker extends React.PureComponent {
 
       const isMyItem = hint.item?.receiver?.slot === mySlot;
       const isMyWorldLocation = hint.item?.sender?.slot === mySlot;
+      console.log(
+        "isMyItem:",
+        isMyItem,
+        "isMyWorldLocation:",
+        isMyWorldLocation,
+      );
 
       if (isMyItem) {
         newHintsForMe.push(hintData);
       }
 
-      if (isMyWorldLocation) {
+      if (isMyWorldLocation && !isMyItem) {
         newMyHints.push(hintData);
+      }
 
-        // Parse the AP location name and add to hintedLocations
+      // Mark hinted locations for purple border (applies for all hints in my world)
+      if (isMyWorldLocation) {
         try {
           const apLocationName = hint.item?.locationName;
           if (apLocationName) {
@@ -579,6 +605,9 @@ class Tracker extends React.PureComponent {
   updateTrackerState(newTrackerState) {
     const { logic, saveData, spheres, trackerState } =
       TrackerController.refreshState(newTrackerState);
+
+    // Keep a synchronous reference so rapid async events always see the latest state
+    this._latestTrackerState = trackerState;
 
     Storage.saveToStorage(saveData);
     this.setState({
@@ -730,12 +759,6 @@ class Tracker extends React.PureComponent {
       openedLocation: null,
       openedLocationIsDungeon: null,
     });
-  }
-
-  toggleOnlyProgressLocations() {
-    const { onlyProgressLocations } = this.state;
-
-    this.updatePreferences({ onlyProgressLocations: !onlyProgressLocations });
   }
 
   toggleSettingsWindow() {
@@ -897,6 +920,7 @@ class Tracker extends React.PureComponent {
               disableLogic={disableLogic}
               extraLocationsBackground={extraLocationsBackground}
               itemsTableBackground={itemsTableBackground}
+              onlyProgressLocations={onlyProgressLocations}
               rightClickToClearAll={rightClickToClearAll}
               sphereTrackingBackground={sphereTrackingBackground}
               statisticsBackground={statisticsBackground}
@@ -909,7 +933,7 @@ class Tracker extends React.PureComponent {
           {showHintPanel && (
             <div className="hint-panel">
               <div className="hint-panel-header">
-                <strong>Hints For Me</strong> (my items in other worlds)
+                <strong>My Items</strong>
               </div>
               {hintsForMe.length === 0 ? (
                 <div className="hint-entry">No hints yet</div>
@@ -930,7 +954,7 @@ class Tracker extends React.PureComponent {
                 ))
               )}
               <div className="hint-panel-header" style={{ marginTop: "8px" }}>
-                <strong>My World Hints</strong> (items in my world for others)
+                <strong>Other's Items</strong>
               </div>
               {myHints.length === 0 ? (
                 <div className="hint-entry">No hints yet</div>
@@ -990,8 +1014,6 @@ class Tracker extends React.PureComponent {
           <Buttons
             settingsWindowOpen={settingsWindowOpen}
             chartListOpen={chartListOpen}
-            onlyProgressLocations={onlyProgressLocations}
-            saveData={saveData}
             showHintPanel={showHintPanel}
             showInfoLegend={showInfoLegend}
             toggleChartList={this.toggleChartList}
@@ -999,7 +1021,6 @@ class Tracker extends React.PureComponent {
             toggleInfoLegend={this.toggleInfoLegend}
             toggleSettingsWindow={this.toggleSettingsWindow}
             toggleEntrances={this.toggleEntrances}
-            toggleOnlyProgressLocations={this.toggleOnlyProgressLocations}
             trackNonProgressCharts={trackNonProgressCharts}
             viewingEntrances={viewingEntrances}
           />

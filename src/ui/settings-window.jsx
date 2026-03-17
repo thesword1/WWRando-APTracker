@@ -1,18 +1,18 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
-import React from 'react';
+import _ from "lodash";
+import PropTypes from "prop-types";
+import React from "react";
 
-import ColorPicker from './color-picker';
-import KeyDownWrapper from './key-down-wrapper';
+import ColorPicker from "./color-picker";
+import KeyDownWrapper from "./key-down-wrapper";
 
 class SettingsWindow extends React.PureComponent {
-  static #DEFAULT_EXTRA_LOCATIONS_BACKGROUND = '#a0a0a0';
+  static #DEFAULT_EXTRA_LOCATIONS_BACKGROUND = "#a0a0a0";
 
-  static #DEFAULT_ITEMS_TABLE_BACKGROUND = '#69891c';
+  static #DEFAULT_ITEMS_TABLE_BACKGROUND = "#69891c";
 
-  static #DEFAULT_STATISTICS_BACKGROUND = '#4f4f4f';
+  static #DEFAULT_STATISTICS_BACKGROUND = "#4f4f4f";
 
-  static #DEFAULT_SPHERE_TRACKING_BACKGROUND = '#dcdcdc';
+  static #DEFAULT_SPHERE_TRACKING_BACKGROUND = "#dcdcdc";
 
   colorPickerRow(label, pickedColor, key, defaultValue) {
     const isColorSet = !_.isNil(pickedColor);
@@ -44,10 +44,7 @@ class SettingsWindow extends React.PureComponent {
           onChange={() => toggleFunc()}
           type="checkbox"
         />
-        <label
-          className="settings-window-label"
-          htmlFor={checkboxId}
-        >
+        <label className="settings-window-label" htmlFor={checkboxId}>
           {labelText}
         </label>
         {isColorSet && (
@@ -78,10 +75,7 @@ class SettingsWindow extends React.PureComponent {
           onChange={() => toggleFunc()}
           type="checkbox"
         />
-        <label
-          className="settings-window-label"
-          htmlFor={checkboxId}
-        >
+        <label className="settings-window-label" htmlFor={checkboxId}>
           {labelText}
         </label>
       </div>
@@ -94,6 +88,7 @@ class SettingsWindow extends React.PureComponent {
       disableLogic,
       extraLocationsBackground,
       itemsTableBackground,
+      onlyProgressLocations,
       rightClickToClearAll,
       sphereTrackingBackground,
       statisticsBackground,
@@ -117,54 +112,56 @@ class SettingsWindow extends React.PureComponent {
           </div>
         </div>
         {this.colorPickerRow(
-          'Locations',
+          "Locations",
           extraLocationsBackground,
-          'extraLocationsBackground',
+          "extraLocationsBackground",
           SettingsWindow.#DEFAULT_EXTRA_LOCATIONS_BACKGROUND,
         )}
         {this.colorPickerRow(
-          'Items',
+          "Items",
           itemsTableBackground,
-          'itemsTableBackground',
+          "itemsTableBackground",
           SettingsWindow.#DEFAULT_ITEMS_TABLE_BACKGROUND,
         )}
         {this.colorPickerRow(
-          'Statistics',
+          "Statistics",
           statisticsBackground,
-          'statisticsBackground',
+          "statisticsBackground",
           SettingsWindow.#DEFAULT_STATISTICS_BACKGROUND,
         )}
         {this.colorPickerRow(
-          'Sphere Tracking',
+          "Sphere Tracking",
           sphereTrackingBackground,
-          'sphereTrackingBackground',
+          "sphereTrackingBackground",
           SettingsWindow.#DEFAULT_SPHERE_TRACKING_BACKGROUND,
         )}
         {this.checkboxRow(
-          'Show Location Logic',
-          disableLogic,
-          'disableLogic',
+          "Show Non-Progress Locations",
+          onlyProgressLocations,
+          "onlyProgressLocations",
           (value) => !value,
         )}
         {this.checkboxRow(
-          'Track Spheres',
-          trackSpheres,
-          'trackSpheres',
+          "Show Location Logic",
+          disableLogic,
+          "disableLogic",
+          (value) => !value,
         )}
+        {this.checkboxRow("Track Spheres", trackSpheres, "trackSpheres")}
         {this.checkboxRow(
-          'Track Non-Progress Charts',
+          "Track Non-Progress Charts",
           trackNonProgressCharts,
-          'trackNonProgressCharts',
+          "trackNonProgressCharts",
         )}
         {this.checkboxRow(
-          'Right Click to Clear All',
+          "Right Click to Clear All",
           rightClickToClearAll,
-          'rightClickToClearAll',
+          "rightClickToClearAll",
         )}
         {this.checkboxRow(
-          'Clear All Includes Dungeon Mail',
+          "Clear All Includes Dungeon Mail",
           clearAllIncludesMail,
-          'clearAllIncludesMail',
+          "clearAllIncludesMail",
         )}
       </div>
     );
@@ -183,6 +180,7 @@ SettingsWindow.propTypes = {
   disableLogic: PropTypes.bool.isRequired,
   extraLocationsBackground: PropTypes.string,
   itemsTableBackground: PropTypes.string,
+  onlyProgressLocations: PropTypes.bool.isRequired,
   rightClickToClearAll: PropTypes.bool.isRequired,
   sphereTrackingBackground: PropTypes.string,
   statisticsBackground: PropTypes.string,

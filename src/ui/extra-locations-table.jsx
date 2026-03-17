@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
-import LogicCalculation from '../services/logic-calculation';
-import LogicHelper from '../services/logic-helper';
-import Spheres from '../services/spheres';
-import TrackerState from '../services/tracker-state';
+import LogicCalculation from "../services/logic-calculation";
+import LogicHelper from "../services/logic-helper";
+import Spheres from "../services/spheres";
+import TrackerState from "../services/tracker-state";
 
-import ExtraLocation from './extra-location';
+import ExtraLocation from "./extra-location";
 
 class ExtraLocationsTable extends React.PureComponent {
   static NUM_EXTRA_LOCATIONS = 5;
@@ -14,7 +14,9 @@ class ExtraLocationsTable extends React.PureComponent {
   static EXTRA_WIDTH = 30;
 
   static getWidth() {
-    return this.NUM_EXTRA_LOCATIONS * ExtraLocation.getWidth() + this.EXTRA_WIDTH;
+    return (
+      this.NUM_EXTRA_LOCATIONS * ExtraLocation.getWidth() + this.EXTRA_WIDTH
+    );
   }
 
   extraLocation(locationName) {
@@ -24,6 +26,7 @@ class ExtraLocationsTable extends React.PureComponent {
       clearSelectedLocation,
       decrementItem,
       disableLogic,
+      hintedLocations,
       incrementItem,
       logic,
       onlyProgressLocations,
@@ -52,6 +55,7 @@ class ExtraLocationsTable extends React.PureComponent {
         clearSelectedLocation={clearSelectedLocation}
         decrementItem={decrementItem}
         disableLogic={disableLogic}
+        hintedLocations={hintedLocations}
         key={locationName}
         incrementItem={incrementItem}
         isDungeon={isDungeon}
@@ -110,6 +114,7 @@ ExtraLocationsTable.propTypes = {
   clearSelectedLocation: PropTypes.func.isRequired,
   decrementItem: PropTypes.func.isRequired,
   disableLogic: PropTypes.bool.isRequired,
+  hintedLocations: PropTypes.object.isRequired,
   incrementItem: PropTypes.func.isRequired,
   logic: PropTypes.instanceOf(LogicCalculation).isRequired,
   onlyProgressLocations: PropTypes.bool.isRequired,

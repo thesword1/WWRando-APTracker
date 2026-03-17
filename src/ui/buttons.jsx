@@ -3,34 +3,18 @@ import React from "react";
 
 import LogicHelper from "../services/logic-helper";
 
-import Storage from "./storage";
-
 class Buttons extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.exportProgress = this.exportProgress.bind(this);
-  }
-
-  async exportProgress() {
-    const { saveData } = this.props;
-
-    await Storage.exportFile(saveData);
-  }
-
   render() {
     const {
       chartListOpen,
       settingsWindowOpen,
       showHintPanel,
       showInfoLegend,
-      onlyProgressLocations,
       toggleChartList,
       toggleHintPanel,
       toggleInfoLegend,
       toggleSettingsWindow,
       toggleEntrances,
-      toggleOnlyProgressLocations,
       trackNonProgressCharts,
       viewingEntrances,
     } = this.props;
@@ -47,15 +31,6 @@ class Buttons extends React.PureComponent {
 
     return (
       <div className="buttons">
-        <button onClick={toggleOnlyProgressLocations} type="button">
-          <input
-            type="checkbox"
-            className="button-checkbox"
-            checked={!onlyProgressLocations}
-            readOnly
-          />
-          Show Non-Progress Locations
-        </button>
         {isRandomEntrances && (
           <button onClick={toggleEntrances} type="button">
             <input
@@ -79,10 +54,6 @@ class Buttons extends React.PureComponent {
             {chartListText}
           </button>
         )}
-        <br />
-        <button onClick={this.exportProgress} type="button">
-          Export Progress
-        </button>
         <button onClick={toggleSettingsWindow} type="button">
           {settingsWindowText}
         </button>
@@ -99,8 +70,6 @@ class Buttons extends React.PureComponent {
 
 Buttons.propTypes = {
   chartListOpen: PropTypes.bool.isRequired,
-  onlyProgressLocations: PropTypes.bool.isRequired,
-  saveData: PropTypes.string.isRequired,
   settingsWindowOpen: PropTypes.bool.isRequired,
   showHintPanel: PropTypes.bool.isRequired,
   showInfoLegend: PropTypes.bool.isRequired,
@@ -108,7 +77,6 @@ Buttons.propTypes = {
   toggleEntrances: PropTypes.func.isRequired,
   toggleHintPanel: PropTypes.func.isRequired,
   toggleInfoLegend: PropTypes.func.isRequired,
-  toggleOnlyProgressLocations: PropTypes.func.isRequired,
   toggleSettingsWindow: PropTypes.func.isRequired,
   trackNonProgressCharts: PropTypes.bool.isRequired,
   viewingEntrances: PropTypes.bool.isRequired,

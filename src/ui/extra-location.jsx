@@ -1,20 +1,20 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
-import React from 'react';
+import _ from "lodash";
+import PropTypes from "prop-types";
+import React from "react";
 
-import LogicCalculation from '../services/logic-calculation';
-import LogicHelper from '../services/logic-helper';
-import Permalink from '../services/permalink';
-import Settings from '../services/settings';
-import Spheres from '../services/spheres';
-import TrackerState from '../services/tracker-state';
+import LogicCalculation from "../services/logic-calculation";
+import LogicHelper from "../services/logic-helper";
+import Permalink from "../services/permalink";
+import Settings from "../services/settings";
+import Spheres from "../services/spheres";
+import TrackerState from "../services/tracker-state";
 
-import ContextMenuWrapper from './context-menu-wrapper';
-import Images from './images';
-import Item from './item';
-import KeyDownWrapper from './key-down-wrapper';
-import RequirementsTooltip from './requirements-tooltip';
-import Tooltip from './tooltip';
+import ContextMenuWrapper from "./context-menu-wrapper";
+import Images from "./images";
+import Item from "./item";
+import KeyDownWrapper from "./key-down-wrapper";
+import RequirementsTooltip from "./requirements-tooltip";
+import Tooltip from "./tooltip";
 
 class ExtraLocation extends React.PureComponent {
   static NUM_CONSISTENT_ITEMS = 4;
@@ -32,12 +32,22 @@ class ExtraLocation extends React.PureComponent {
   };
 
   static getWidth() {
-    const numItems = this.NUM_CONSISTENT_ITEMS
-      + (Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_DUNGEON_ENTRANCES) ? 1 : 0)
-      + (Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_MINIBOSS_ENTRANCES) ? 1 : 0)
-      + (Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_BOSS_ENTRANCES) ? 1 : 0);
+    const numItems =
+      this.NUM_CONSISTENT_ITEMS +
+      (Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_DUNGEON_ENTRANCES)
+        ? 1
+        : 0) +
+      (Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_MINIBOSS_ENTRANCES)
+        ? 1
+        : 0) +
+      (Settings.getOptionValue(Permalink.OPTIONS.RANDOMIZE_BOSS_ENTRANCES)
+        ? 1
+        : 0);
 
-    return Math.max(this.ITEM_WIDTH * numItems + this.EXTRA_WIDTH, this.MIN_WIDTH);
+    return Math.max(
+      this.ITEM_WIDTH * numItems + this.EXTRA_WIDTH,
+      this.MIN_WIDTH,
+    );
   }
 
   compassItem() {
@@ -189,10 +199,7 @@ class ExtraLocation extends React.PureComponent {
   }
 
   dungeonEntrance(entranceInfo) {
-    const {
-      entrance,
-      color,
-    } = entranceInfo;
+    const { entrance, color } = entranceInfo;
 
     const {
       clearSelectedItem,
@@ -230,7 +237,10 @@ class ExtraLocation extends React.PureComponent {
       />
     );
 
-    if (!disableLogic && color !== LogicCalculation.LOCATION_COLORS.CHECKED_LOCATION) {
+    if (
+      !disableLogic &&
+      color !== LogicCalculation.LOCATION_COLORS.CHECKED_LOCATION
+    ) {
       const requirements = logic.formattedRequirementsForEntrance(entrance);
       const requirementsTooltip = (
         <RequirementsTooltip requirements={requirements} />
@@ -286,16 +296,15 @@ class ExtraLocation extends React.PureComponent {
   }
 
   entranceExitItems() {
-    const {
-      disableLogic,
-      locationName,
-      logic,
-      viewingEntrances,
-    } = this.props;
+    const { disableLogic, locationName, logic, viewingEntrances } = this.props;
 
     if (viewingEntrances) {
-      const dungeonEntrances = logic.entrancesListForDungeon(locationName, { disableLogic });
-      return _.map(dungeonEntrances, (dungeonEntrance) => this.dungeonEntrance(dungeonEntrance));
+      const dungeonEntrances = logic.entrancesListForDungeon(locationName, {
+        disableLogic,
+      });
+      return _.map(dungeonEntrances, (dungeonEntrance) =>
+        this.dungeonEntrance(dungeonEntrance),
+      );
     }
 
     const dungeonExits = LogicHelper.exitsForDungeon(locationName);
@@ -306,18 +315,19 @@ class ExtraLocation extends React.PureComponent {
     const { locationName } = this.props;
 
     const isMainDungeon = LogicHelper.isMainDungeon(locationName);
-    const isRequiredBossesModeDungeon = LogicHelper.isRequiredBossesModeDungeon(locationName);
+    const isRequiredBossesModeDungeon =
+      LogicHelper.isRequiredBossesModeDungeon(locationName);
 
     return (
       <div className="dungeon-items">
         {this.entranceExitItems()}
-        { isMainDungeon && (
+        {isMainDungeon && (
           <>
             {this.smallKeyItem()}
             {this.bigKeyItem()}
           </>
         )}
-        { isRequiredBossesModeDungeon && (
+        {isRequiredBossesModeDungeon && (
           <>
             {this.dungeonMapItem()}
             {this.compassItem()}
@@ -328,19 +338,19 @@ class ExtraLocation extends React.PureComponent {
   }
 
   locationIcon() {
-    const {
-      isDungeon,
-      locationName,
-      logic,
-    } = this.props;
+    const { isDungeon, locationName, logic } = this.props;
 
     let locationIcon;
     if (isDungeon) {
       const isBossDefeated = logic.isBossDefeated(locationName);
 
-      locationIcon = _.get(Images.IMAGES, ['DUNGEONS', locationName, isBossDefeated]);
+      locationIcon = _.get(Images.IMAGES, [
+        "DUNGEONS",
+        locationName,
+        isBossDefeated,
+      ]);
     } else {
-      locationIcon = _.get(Images.IMAGES, ['MISC_LOCATIONS', locationName]);
+      locationIcon = _.get(Images.IMAGES, ["MISC_LOCATIONS", locationName]);
     }
 
     return (
@@ -351,47 +361,53 @@ class ExtraLocation extends React.PureComponent {
   }
 
   chestsCounter() {
-    const {
-      disableLogic,
-      locationName,
-      logic,
-      onlyProgressLocations,
-    } = this.props;
+    const { disableLogic, locationName, logic, onlyProgressLocations } =
+      this.props;
 
-    const {
-      color,
-      numAvailable,
-      numRemaining,
-    } = logic.locationCounts(locationName, {
-      onlyProgressLocations,
-      disableLogic,
-    });
+    const { color, numAvailable, numRemaining } = logic.locationCounts(
+      locationName,
+      {
+        onlyProgressLocations,
+        disableLogic,
+      },
+    );
 
     const className = `extra-location-chests ${color}`;
-    const chestCounts = disableLogic ? numRemaining : `${numAvailable}/${numRemaining}`;
+    const chestCounts = disableLogic
+      ? numRemaining
+      : `${numAvailable}/${numRemaining}`;
 
-    return (
-      <div className={className}>
-        {chestCounts}
-      </div>
-    );
+    return <div className={className}>{chestCounts}</div>;
   }
 
   render() {
     const {
       clearAllLocations,
       clearSelectedLocation,
+      hintedLocations,
       isDungeon,
       locationName,
       rightClickToClearAll,
       setSelectedLocation,
+      trackerState,
       updateOpenedLocation,
     } = this.props;
 
-    const updateOpenedLocationFunc = () => updateOpenedLocation({
-      isDungeon,
-      locationName,
-    });
+    let isHinted = false;
+    if (hintedLocations && hintedLocations[locationName]) {
+      for (const loc of hintedLocations[locationName]) {
+        if (!trackerState.isLocationChecked(locationName, loc)) {
+          isHinted = true;
+          break;
+        }
+      }
+    }
+
+    const updateOpenedLocationFunc = () =>
+      updateOpenedLocation({
+        isDungeon,
+        locationName,
+      });
 
     const setSelectedLocationFunc = () => setSelectedLocation({ locationName });
 
@@ -403,9 +419,11 @@ class ExtraLocation extends React.PureComponent {
       }
     };
 
+    const extraLocationClass = `extra-location${isHinted ? " hinted-extra-location" : ""}`;
+
     return (
       <div
-        className="extra-location"
+        className={extraLocationClass}
         onBlur={clearSelectedLocation}
         onClick={updateOpenedLocationFunc}
         onContextMenu={ContextMenuWrapper.onRightClick(clearAllLocationsFunc)}
@@ -431,6 +449,7 @@ ExtraLocation.propTypes = {
   clearSelectedLocation: PropTypes.func.isRequired,
   decrementItem: PropTypes.func.isRequired,
   disableLogic: PropTypes.bool.isRequired,
+  hintedLocations: PropTypes.object.isRequired,
   incrementItem: PropTypes.func.isRequired,
   isDungeon: PropTypes.bool.isRequired,
   locationName: PropTypes.string.isRequired,

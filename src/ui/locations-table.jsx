@@ -233,6 +233,7 @@ class LocationsTable extends React.PureComponent {
       clearAllLocations,
       decrementItem,
       disableLogic,
+      hintedLocations,
       incrementItem,
       logic,
       onlyProgressLocations,
@@ -258,6 +259,7 @@ class LocationsTable extends React.PureComponent {
           clearSelectedLocation={this.clearSelectedLocation}
           decrementItem={decrementItem}
           disableLogic={disableLogic}
+          hintedLocations={hintedLocations}
           incrementItem={incrementItem}
           logic={logic}
           onlyProgressLocations={onlyProgressLocations}
