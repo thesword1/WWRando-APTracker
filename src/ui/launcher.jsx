@@ -2,11 +2,9 @@ import _ from "lodash";
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-import { Client } from "archipelago.js";
-
 import HEADER_IMAGE from "../images/header.png";
+import APConnector from "../services/ap-connector";
 import Permalink from "../services/permalink";
-import SlotDataMapper from "../services/slot-data-mapper";
 
 import DropdownOptionInput from "./dropdown-option-input";
 import TextBoxOptionInput from "./textbox-option-input";
@@ -423,7 +421,7 @@ export default class Launcher extends React.PureComponent {
           this.textInput({
             labelText: "Archipelago Server Link",
             optionName: Permalink.OPTIONS.ARCHIPELAGO_LINK,
-            placeholder: "archipelago.gg:00000",
+            placeholder: "hostname:port",
           }),
           this.textInput({
             labelText: "Archipelago Player Name",
@@ -458,34 +456,16 @@ export default class Launcher extends React.PureComponent {
     try {
       toast.info("Connecting to Archipelago server...");
 
-      const client = new Client();
-      const loginOptions = {
-        version: { major: 0, minor: 6, build: 6 },
-        tags: ["Tracker", "NoText"],
-      };
-      if (password) {
-        loginOptions.password = password;
-      }
-      const slotData = await client.login(
+      const { options, permalink } = await APConnector.connect(
         serverLink,
         playerName,
-        "The Wind Waker",
-        loginOptions,
+        password,
       );
-
-      const seedName = client.room.seedName || "master";
-      client.socket.disconnect();
-
-      const options = SlotDataMapper.mapToOptions(slotData, seedName);
-      _.set(options, Permalink.OPTIONS.ARCHIPELAGO_LINK, serverLink);
-      _.set(options, Permalink.OPTIONS.ARCHIPELAGO_NAME, playerName);
-      _.set(options, Permalink.OPTIONS.ARCHIPELAGO_PASSWORD, password || "");
 
       this.updateOptions(options);
 
       toast.success("Connected! Launching tracker...");
 
-      const permalink = Permalink.encode(options);
       const encodedPermalink = encodeURIComponent(permalink);
       Launcher.openTrackerWindow(`/new/${encodedPermalink}`);
     } catch (err) {
