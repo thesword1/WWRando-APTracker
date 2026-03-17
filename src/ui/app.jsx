@@ -1,23 +1,17 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import {
-  HashRouter,
-  Route,
-  Routes,
-  useParams,
-} from 'react-router-dom';
+import PropTypes from "prop-types";
+import React from "react";
+import { HashRouter, Route, Routes, useParams } from "react-router-dom";
 
-import Launcher from './launcher';
-import Tracker from './tracker';
+import DirectLaunch from "./direct-launch";
+import Launcher from "./launcher";
+import Tracker from "./tracker";
 
-import '../css/main.scss';
+import "../css/main.scss";
 
 function RenderTracker({ loadProgress }) {
   const { permalink } = useParams();
 
-  return (
-    <Tracker permalink={permalink} loadProgress={loadProgress} />
-  );
+  return <Tracker permalink={permalink} loadProgress={loadProgress} />;
 }
 
 RenderTracker.propTypes = {
@@ -28,11 +22,8 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<Launcher />}
-        />
+        <Route exact path="/" element={<Launcher />} />
+        <Route exact path="/launch" element={<DirectLaunch />} />
         <Route
           exact
           path="/tracker/new/:permalink"
