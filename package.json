@@ -64,7 +64,7 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "depcheck": "^1.4.7",
-    "webpack-dev-server": "^5.0.4",
+    "webpack-dev-server": "^5.2.3",
     "workbox-webpack-plugin": "^7.1.0"
   }
 }
