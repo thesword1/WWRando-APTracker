@@ -174,6 +174,7 @@ describe("Settings", () => {
         },
         version: "1.0.0",
       });
+      Settings.setExcludedLocations(["Fire Mountain - Big Octo"]);
     });
 
     test("resets all the settings", () => {
@@ -183,6 +184,56 @@ describe("Settings", () => {
       expect(Settings.options).toEqual(null);
       expect(Settings.startingGear).toEqual(null);
       expect(Settings.version).toEqual(null);
+      expect(Settings.excludedLocations).toEqual(null);
+    });
+  });
+
+  describe("setExcludedLocations", () => {
+    test("sets the excluded locations", () => {
+      Settings.setExcludedLocations(["Fire Mountain - Big Octo"]);
+
+      expect(Settings.excludedLocations).toEqual(["Fire Mountain - Big Octo"]);
+    });
+
+    test("is not cleared by initializeFromPermalink", () => {
+      Settings.setExcludedLocations(["Fire Mountain - Big Octo"]);
+      Settings.initializeFromPermalink(Permalink.DEFAULT_PERMALINK);
+
+      expect(Settings.excludedLocations).toEqual(["Fire Mountain - Big Octo"]);
+    });
+  });
+
+  describe("isLocationExcluded", () => {
+    describe("when the location is in the excluded locations", () => {
+      beforeEach(() => {
+        Settings.setExcludedLocations(["Fire Mountain - Big Octo"]);
+      });
+
+      test("returns true", () => {
+        const isLocationExcluded = Settings.isLocationExcluded("Fire Mountain", "Big Octo");
+
+        expect(isLocationExcluded).toEqual(true);
+      });
+    });
+
+    describe("when the location is not in the excluded locations", () => {
+      beforeEach(() => {
+        Settings.setExcludedLocations(["Fire Mountain - Big Octo"]);
+      });
+
+      test("returns false", () => {
+        const isLocationExcluded = Settings.isLocationExcluded("Private Oasis", "Big Octo");
+
+        expect(isLocationExcluded).toEqual(false);
+      });
+    });
+
+    describe("when no excluded locations are set", () => {
+      test("returns false", () => {
+        const isLocationExcluded = Settings.isLocationExcluded("Fire Mountain", "Big Octo");
+
+        expect(isLocationExcluded).toEqual(false);
+      });
     });
   });
 

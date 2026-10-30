@@ -13,7 +13,7 @@ Based on [wooferzfg's TWW Randomizer Tracker](https://github.com/wooferzfg/tww-r
 
 ### Archipelago Integration
 
-The tracker connects to an [Archipelago](https://archipelago.gg/) multiworld server in real time using the `archipelago.js` client library. When launching the tracker, you provide your AP server URL, slot name, and (optionally) a password. These are encoded into a permalink so sessions can be shared or resumed.
+The tracker connects to an [Archipelago](https://archipelago.gg/) multiworld server in real time using the `archipelago.js` client library. When launching the tracker, you provide your AP server URL, slot name, and (optionally) a password. These are encoded into a permalink so sessions can be shared or resumed. The corresponding YAML file can also (optionally) be uploaded to ignore excluded locations.
 
 **Connection lifecycle:**
 

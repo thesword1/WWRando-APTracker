@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Locations from "../services/locations";
 import LogicHelper from "../services/logic-helper";
 import Permalink from "../services/permalink";
+import Settings from "../services/settings";
 import TrackerController from "../services/tracker-controller";
 import ArchipelagoInterface from "../services/ArchipelagoInterface";
 import { computeEntranceMappings } from "../services/entrance-auto-tracker";
@@ -122,8 +123,24 @@ class Tracker extends React.PureComponent {
     }
 
     try {
+      const options = Permalink.decode(decodedPermalink);
+      const excludedLocations = Storage.loadExcludedLocations(
+        _.get(options, Permalink.OPTIONS.SEED_NAME),
+        _.get(options, Permalink.OPTIONS.ARCHIPELAGO_NAME),
+      );
+      Settings.setExcludedLocations(excludedLocations);
+
       initialData =
         await TrackerController.initializeFromPermalink(decodedPermalink);
+
+      const unknownLocations = _.reject(excludedLocations, (locationName) =>
+        Locations.hasLocation(locationName),
+      );
+      if (!_.isEmpty(unknownLocations)) {
+        toast.warn(
+          `These excluded locations were not found: ${_.join(unknownLocations, ", ")}`,
+        );
+      }
     } catch (err) {
       toast.error("Tracker could not be initialized!");
       throw err;

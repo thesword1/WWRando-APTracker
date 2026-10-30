@@ -347,6 +347,10 @@ class LogicHelper {
   }
 
   static isProgressLocation(generalLocation, detailedLocation) {
+    if (Settings.isLocationExcluded(generalLocation, detailedLocation)) {
+      return false;
+    }
+
     const locationTypes = Locations.getLocation(
       generalLocation,
       detailedLocation,
@@ -383,6 +387,10 @@ class LogicHelper {
 
   static isPotentialKeyLocation(generalLocation, detailedLocation) {
     if (!this.isMainDungeon(generalLocation)) {
+      return false;
+    }
+
+    if (Settings.isLocationExcluded(generalLocation, detailedLocation)) {
       return false;
     }
 

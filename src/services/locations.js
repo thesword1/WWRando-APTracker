@@ -80,8 +80,18 @@ class Locations {
     _.set(this.locations, [generalLocation, detailedLocation, infoKey], infoValue);
   }
 
+  static hasLocation(fullLocationName) {
+    const locationMatch = fullLocationName.match(this.#LOCATION_NAME_REGEX);
+
+    if (!locationMatch) {
+      return false;
+    }
+
+    return _.has(this.locations, [locationMatch[1], locationMatch[2]]);
+  }
+
   static splitLocationName(fullLocationName) {
-    const locationMatch = fullLocationName.match(/((?:(?! - ).)+) - (.+)/);
+    const locationMatch = fullLocationName.match(this.#LOCATION_NAME_REGEX);
 
     if (!locationMatch) {
       // istanbul ignore next
@@ -93,6 +103,8 @@ class Locations {
       detailedLocation: locationMatch[2],
     };
   }
+
+  static #LOCATION_NAME_REGEX = /((?:(?! - ).)+) - (.+)/;
 }
 
 export default Locations;

@@ -247,6 +247,36 @@ describe('Locations', () => {
     });
   });
 
+  describe('hasLocation', () => {
+    beforeEach(() => {
+      Locations.locations = {
+        'Windfall Island': {
+          'Jail - Tingle - First Gift': {
+            types: 'Free Gift',
+          },
+        },
+      };
+    });
+
+    test('returns true when the location exists', () => {
+      const hasLocation = Locations.hasLocation('Windfall Island - Jail - Tingle - First Gift');
+
+      expect(hasLocation).toEqual(true);
+    });
+
+    test('returns false when the location does not exist', () => {
+      const hasLocation = Locations.hasLocation('Windfall Island - Jail - Tingle - Second Gift');
+
+      expect(hasLocation).toEqual(false);
+    });
+
+    test('returns false when the name cannot be split', () => {
+      const hasLocation = Locations.hasLocation('Windfall Island');
+
+      expect(hasLocation).toEqual(false);
+    });
+  });
+
   describe('splitLocationName', () => {
     test('returns the general location and detailed location', () => {
       const input = 'Outset Island - Savage Labyrinth - Floor 30';

@@ -8,6 +8,13 @@ export default class Storage {
     localStorage.setItem(this.#SAVE_FILE_KEY, fileData);
   }
 
+  static async loadTextFile(accept) {
+    const file = await this.#loadFileFromDialog(accept);
+    const contents = await this.#readFile(file);
+
+    return { contents, name: file.name };
+  }
+
   static loadFromStorage() {
     return localStorage.getItem(this.#SAVE_FILE_KEY);
   }
@@ -24,6 +31,30 @@ export default class Storage {
   static savePreferences(preferences) {
     const preferencesString = JSON.stringify(preferences);
     localStorage.setItem(this.#PREFERENCES_KEY, preferencesString);
+  }
+
+  static loadExcludedLocations(seedName, playerName) {
+    const excludedString = localStorage.getItem(this.#EXCLUDED_LOCATIONS_KEY);
+    const excluded = JSON.parse(excludedString);
+
+    if (
+      _.isNil(excluded)
+      || excluded.seedName !== seedName
+      || excluded.playerName !== playerName
+    ) {
+      return [];
+    }
+
+    return excluded.locations;
+  }
+
+  static saveExcludedLocations(seedName, playerName, locations) {
+    const excludedString = JSON.stringify({ seedName, playerName, locations });
+    localStorage.setItem(this.#EXCLUDED_LOCATIONS_KEY, excludedString);
+  }
+
+  static clearExcludedLocations() {
+    localStorage.removeItem(this.#EXCLUDED_LOCATIONS_KEY);
   }
 
   static async exportFile(saveData) {
@@ -55,11 +86,16 @@ export default class Storage {
 
   static #PREFERENCES_KEY = 'preferences';
 
-  static async #loadFileFromDialog() {
+  static #EXCLUDED_LOCATIONS_KEY = 'excludedLocations';
+
+  static async #loadFileFromDialog(accept) {
     return new Promise((resolve, reject) => {
       const input = document.createElement('input');
 
       input.setAttribute('type', 'file');
+      if (!_.isNil(accept)) {
+        input.setAttribute('accept', accept);
+      }
 
       input.onchange = () => {
         const file = _.first(input.files);

@@ -2381,6 +2381,33 @@ describe("LogicHelper", () => {
         expect(isProgressLocation).toEqual(true);
       });
     });
+
+    describe("when the location is excluded", () => {
+      beforeEach(() => {
+        Locations.locations = {
+          "Wind Temple": {
+            "Big Key Chest": {
+              need: "Can Access Wind Temple",
+              types: "Dungeon",
+            },
+          },
+        };
+
+        Settings.initializeRaw({
+          flags: [Settings.FLAGS.DUNGEON],
+        });
+        Settings.setExcludedLocations(["Wind Temple - Big Key Chest"]);
+      });
+
+      test("returns false", () => {
+        const isProgressLocation = LogicHelper.isProgressLocation(
+          "Wind Temple",
+          "Big Key Chest",
+        );
+
+        expect(isProgressLocation).toEqual(false);
+      });
+    });
   });
 
   describe("randomizedChartForIsland", () => {
@@ -2748,6 +2775,30 @@ describe("LogicHelper", () => {
         );
 
         expect(isPotentialKeyLocation).toEqual(true);
+      });
+    });
+
+    describe("when the location is excluded", () => {
+      beforeEach(() => {
+        Locations.locations = {
+          "Wind Temple": {
+            "Big Key Chest": {
+              need: "Can Access Wind Temple",
+              types: "Dungeon",
+            },
+          },
+        };
+
+        Settings.setExcludedLocations(["Wind Temple - Big Key Chest"]);
+      });
+
+      test("returns false", () => {
+        const isPotentialKeyLocation = LogicHelper.isPotentialKeyLocation(
+          "Wind Temple",
+          "Big Key Chest",
+        );
+
+        expect(isPotentialKeyLocation).toEqual(false);
       });
     });
 

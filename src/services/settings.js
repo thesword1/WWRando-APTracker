@@ -42,6 +42,15 @@ class Settings {
     this.options = null;
     this.startingGear = null;
     this.version = null;
+    this.excludedLocations = null;
+  }
+
+  static setExcludedLocations(excludedLocations) {
+    this.excludedLocations = excludedLocations;
+  }
+
+  static isLocationExcluded(generalLocation, detailedLocation) {
+    return _.includes(this.excludedLocations, `${generalLocation} - ${detailedLocation}`);
   }
 
   static FLAGS = Constants.createFromArray(FLAGS);
